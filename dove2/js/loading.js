@@ -5,10 +5,10 @@ var tyle = "css/default.css"
 if(sessionStorage.getItem("style")){
 	tyle = sessionStorage.getItem("style");
 }
-var aniTime = 2000;
+var aniTime = 0;
 switch(tyle){
-	case "css/default.css":aniTime = 2000;break;
-	case "css/colorBlock.css":aniTime = 7000;break;
+	case "css/default.css":aniTime = 0;break;
+	case "css/colorBlock.css":aniTime = 2000;break;
 }
 document.onreadystatechange = function(){
 	//如果文档全部加载完成
