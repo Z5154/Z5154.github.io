@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/default.css" id="stylesheet"/>
+		<script type="text/javascript" src="js/theme.js"></script>
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="icon" href="img/timg.jpg" />
+		<title>鸽子设计工作室</title>
+	</head>
+
+	<body>
+		<!--加载动画-->
+		<div id="loading">
+			<div id="loading_default" class="loading_item"></div>
+			<div id="loading_gold" class="loading_item"></div>
+			<div id="loading_colorBlock" class="loading_item">
+				<div class="block_top block">￣▽￣</div>
+				<div class="block_bottom block">●'◡'●</div>
+				<div class="block_left block">╬▔皿▔</div>
+				<div class="block_right block">ԾㅂԾ</div>
+				<div class="block_p block">☆▽☆</div>
+				<div class="block_n block">DOVE</div>
+			</div>
+			<p class="loading_item">Loading...</p>
+			<div id="loading_pixel" class="loading_item"></div>
+			<div id="loading_science" class="loading_item"></div>
+			<div id="loading_asson" class="loading_item"></div>
+		</div>
+		<!--固定布局的侧边导航-->
+		<ul id="cbList_container" class="text-center hidden-xs">
+			<li id="conf">
+				<a class="cbList" title="切换侧边导航" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="点击此按钮打开导航">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-cog-solid"></use>
+					</svg>
+				</a>
+			</li>
+			
+			
+			<li>
+				<a class="cbList" id="help" title="帮助" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="有任何问题？欢迎和我们联系">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-comment-alt-solid"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="cbList" title="邮箱" href="mailto:mailteam@qq.com" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="通过邮箱与我们联系">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-envelope-solid"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="cbList" title="微信">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-comments-solid"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="cbList" title="分享">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-share-alt-solid"></use>
+					</svg>
+				</a>
+			</li>
+			<li id="toTop">
+				<a class="cbList" title="回到顶部" href="#topNav" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="点击此按钮返回顶部">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-huojian"></use>
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="cbList" title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=346935060&site=qq&menu=yes" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="通过QQ与我们对话">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-qq-brands"></use>
+					</svg>
+				</a>
+			</li>
+			
+			<li>
+				<a class="cbList" title="鸽子工作室的后门" href="#ourStyle" data-trigger="hover" data-container="body" data-toggle="popover" data-placement="left" data-content="去往另外一个世界" id="dove">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-men"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+		<nav class="navbar navbar-default" id="topNav">
+			<div class="container">
+				<!--小屏幕导航按钮和logo-->
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">
+						鸽子设计工作室
+					</a>
+				</div>
+				<!--导航-->
+				<div class="collapse navbar-collapse" id="mynavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#home">首页</a>
+						</li>
+						<li>
+							<a href="#introduce_team">团队简介</a>
+						</li>
+						<li>
+							<a href="#introduce_member">我们的团队</a>
+						</li>
+						<li>
+							<a href="#Service">服务项目</a>
+						</li>
+						<li>
+							<a href="#works">作品展示</a>
+						</li>
+						<li>
+							<a href="#contact">联系我们</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--广告图-->
+		<section>
+			<div>
+				<div class="container-fluid" id="main">
+					<div class="hidden-xs" id="bn">
+						<img src="img/work3.jpg" class="img-responsive banner_img" id="on" />
+						<img src="img/work2.jpg" class="img-responsive banner_img" />
+						<img src="img/work1.jpg" class="img-responsive banner_img" />
+						<img src="img/work4.jpg" class="img-responsive banner_img" />
+						<button type="button" id="toLeft"><</button>
+						<button type="button" id="toRight">></button>
+						<ul id="banner_choose">
+							<li class="choose_item active" data-index="0"></li>
+							<li class="choose_item" data-index="1"></li>
+							<li class="choose_item" data-index="2"></li>
+							<li class="choose_item" data-index="3"></li>
+						</ul>
+						<div class="text-center" id="float" style="margin-bottom: 50px;">
+							<img id="banner_icon" src="img/ti.png" />
+							<h2 class="h2">我们都是兄弟，怎么可能鸽你呢</h2>
+							<p>We are all brothers, how can pigeon you</p>
+							<button class="btn btn-default btn-info"><a href="#Service">服务项目</a></button>
+							<button class="btn btn-default"><a href="#contact">联系我们</a></button>
+						</div>
+					</div>
+					<div id="introduce_team">
+						<p id="icon_mask"></p>
+						<h2 class="h2 spotlight">鸽子工作室</h2>
+						<br />
+						<p title="兄弟就当无事发生过" class="lie">我们是兄弟，我怎么会鸽你呢</p>
+						<div class="container" id="team">
+							<div class="col-md-6">
+								<img class="img-responsive" src="img/dove.jpg"/>
+								<img class="img-responsive"/>
+							</div>
+							<div class="col-md-6">
+								<p class="text-left">
+									&nbsp;&nbsp;&nbsp; 绵阳鸽子工作室是定位于游戏 、影视2D原画以及概念设计的美术外 包团队，我们专精于2D原画设定，同 时能承接由2D到3D建模，动作特效全 流程的游戏美术外包。目前团队人员由 来自国内外行业知名的概念设计师、插 画师组成。在未来百年内，虚拟世界必 将成为我们生活的主体，我们希望在这个 虚拟世界里，我们能成为那个世界卓越 的设计师，里面的一花一草，一山一水 ，每一建筑，每一个种族，每一个职业 ，每一个人物，都是匠心独运的设计。 我们的使命，就是虚拟世界美的缔造者 、无可挑剔的游戏概念设计团队。
+								</p>
+								<button class="light">了解更多<span class="glyphicon glyphicon-plus"></span></button>
+							</div>
+						</div>
+					</div>
+					<div class="container-fluid" id="introduce_member">
+						<div class="container text-center">
+							<h2 class="h2 spotlight">我们的团队</h2>
+							<br />
+							<p title="这场面我还真没见过" class="lie">"我们什么场面没见过"</p>
+							<div class="media well wow fadeInLeft member" data-wow-duration="0.8s">
+								<div class="media-left">
+									<a href="">
+										<img src='img/100px-Healthire_portrait.png' class="media-object" alt="member" title="唐强" />
+									</a>
+								</div>
+								<div class="media-body text-left">
+									<h4 class="media-heading">唐强&nbsp;&nbsp;&nbsp;&nbsp;<small class="tip">观察者</small></h4>
+									<p>资深画师</p>
+									<p>4年工作经验，擅长美式动画、动画场景以及插画设计。</p>
+									<p>"今晚我一定交稿"</p>
+									<p class="longText">
+										行业一线游戏设计师，中国游戏概念设计的代表人物。曾参与多款知名网络游戏的创意和研发工作，以其独到的设计理念和表现手法，获得了国内外CG领域的一致认可。 唐强是中国概念设计领域的实力派之一，扎实的绘画基础和审美素养，成熟大气的设计风格成为他的创作标签，在中国传统风格设计的重新审视和定义上，做出了突出的贡献。
+										<br /> 目前在鸽子工作室养伤。
+									</p>
+								</div>
+							</div>
+							<div class="media well wow fadeInRight member" data-wow-duration="0.8s">
+								<div class="media-body text-right">
+									<h4 class="media-heading">毛秋月&nbsp;&nbsp;&nbsp;&nbsp;<small class="tip">牧师</small></h4>
+									<p>项目管理负责人</p>
+									<p>5年项目管理经验 担任此次项目的管理工作及规划 </p>
+									<p>"人都去哪了"</p>
+									<p class="longText">
+										来自中国的著名概念设计师，三大著名画师之二。 基本功扎实，笔法肆意潇洒，技法极具特色，柔光搭配硬边多图层叠加，厚重而不失灵动。 此外毛秋月还涉猎多个题材和类型，和国内外众多知名游戏影视公司都有过合作，是国内为数不多的将CG绘画上升到艺术层面的画师之一。
+										<br /> 目前失去了绘画兴趣。
+									</p>
+								</div>
+								<div class="media-left">
+									<a href="">
+										<img src='img/100px-Kyren_portrait.png' class="media-object" title="唐强" />
+									</a>
+								</div>
+							</div>
+							<div class="media well wow fadeInLeft member" data-wow-duration="0.8s">
+								<div class="media-left">
+									<a href="">
+										<img src='img/100px-Tom.png' class="media-object" title="翟维" />
+									</a>
+								</div>
+								<div class="media-body text-left">
+									<h4 class="media-heading">翟维&nbsp;&nbsp;&nbsp;&nbsp;<small class="tip">战士</small></h4>
+									<p>像素画师</p>
+									<p>7年工作经验，擅长像素动画、场景、人物等各类艺术</p>
+									<p>"谁去把电费交了"</p>
+									<p class="longText">
+										Z.W ，2007年中国最具国际影响力的数字艺术家，其作品《奇异之旅》，在全球最专业的CG门户Cgsociety的作品大赛中技压群雄获得第一名。 如今何德宏身居海外，自2007年至今在Redeye Studio Pte Ltd(新加坡)，任美术指导。曾在Dark Sovereign2D 担任概念设计、新加坡军事宣传插图和工具概念设计。 2007年作品入选Imagine FX、Future Publishing 和Frank Frazetta 。 其中接受Frank Frazetta杂志专访，并为其80 周年创作纪念画，及“波塞东之怒”插画教程。
+										<br /> 目前在鸽子工作室打工。
+									</p>
+								</div>
+							</div>
+							<div class="media well wow fadeInRight member" data-wow-duration="0.8s">
+								<div class="media-body text-right">
+									<h4 class="media-heading">喜你不厌&nbsp;&nbsp;&nbsp;&nbsp;<small class="tip">无名的隐士</small></h4>
+									<a href="limaoxing.html">
+										<p>资深画师</p>
+									</a>
+									<p>荣获2020年鸽子奖提名，但最后没去领 据说擅长科幻题材</p>
+									<p>"🖥✍😫❌🕊🕊🕊🕊😁✔"</p>
+									<p class="longText">
+										2009年7月，国际游戏美术设计大赛Dominance War IV的最终评选结果揭晓，冠军获得者竟是一名中国人，他就是刘茂鑫，又名G·J。 这让很多游戏美术从业者、数码绘画爱好者都认识了这位业界新秀，也让他成为国内当下最受瞩目的概念设计师\插画家之一。
+										<br /> 目前在鸽子工作室吃老本。
+									</p>
+								</div>
+								<div class="media-left">
+									<a href="">
+										<img src='img/100px-Meta_portrait.png' class="media-object" alt="外星人" title="唐强" />
+									</a>
+								</div>
+							</div>
+							<div class="pop_image_left hidden-sm hidden-xs wow fadeInLeft" data-wow-duration="0.2s">
+								<img src="img/basketball_younger.png" />
+							</div>
+							<div class="pop_image_right hidden-sm hidden-xs wow fadeInRight" data-wow-duration="0.2s">
+								<img src="img/basketball_olderman2.png" />
+							</div>
+						</div>
+					</div>
+
+					<!--服务项目模块-->
+
+					<div class="row text-center" id="Service">
+						<h2 class="h2 spotlight">服务项目</h2>
+						<br />
+						<p title="？？？" class="lie">"我们并非生产商品，我们创造艺术"</p>
+						<div class="row">
+							<div class="col-md-3 service_img">
+								<div>
+									<img src="img/sun.png" class="img-responsive" />
+									<div class="mask">
+										<div class="col-md-12">
+											<h2>角色·卡片美宣设计</h2>
+											<p>(包含中式、欧美写实、Q版卡通等风格)的设定、概念设计以及宣传的制作</p>
+											<h1>原画设计<br/><small class="text-uppercase">original design</small></h1>
+										</div>
+										<button class="light">了解更多</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 service_img">
+								<div>
+									<img src="img/ninja.png" class="img-responsive" />
+									<div class="mask">
+										<div class="col-md-12">
+											<h2>2.5D、3D手绘和次时代</h2>
+											<p>(角色、场景、道具、机械)
+												<br /> 的模型以及贴图制作
+											</p>
+											<h1>模型设计<br/><small class="text-uppercase">Model design</small></h1>
+
+										</div>
+										<button class="light">了解更多</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 service_img">
+								<div>
+									<img src="img/BlackEvil.png" class="img-responsive" />
+									<div class="mask">
+										<div class="col-md-12">
+											<h2>人物造型设计和场景设计</h2>
+											<p>日漫、写实、欧美、中式古风各类风格场景我们都游刃有余</p>
+											<h1>场景设计<br/><small class="text-uppercase">Scene design</small></h1>
+										</div>
+										<button class="light">了解更多</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 service_img">
+								<div>
+									<img src="img/ChivalrousMan.jpg" class="img-responsive" />
+									<div class="mask">
+										<div class="col-md-12">
+											<h2>游戏剧情、人物背景</h2>
+											<p>我们创造无数恢弘的史诗也揭开无数的迷局</p>
+											<h1>故事设计<br/><small class="text-uppercase">story design</small></h1>
+										</div>
+										<button class="light">了解更多</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--作品展示模块-->
+						<div id="works" class="row">
+							<h2 class="h2 spotlight">作品展示</h2>
+							<br />
+							<p class="lie" title="艺术就是派大星">我们的每一件作品都堪称艺术</p>
+							<div class="col-md-12">
+								<ul id="ourWorks" class="nav nav-tabs">
+									<li class="active" data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="今晚我一定交稿。">
+										<a href="#tq" data-toggle="tab">唐强</a>
+									</li>
+									<li data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="人都去哪儿了?">
+										<a href="#mqy" data-toggle="tab">毛秋月</a>
+									</li>
+									<li data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="谁去把电费交了?">
+										<a href="#me" data-toggle="tab">翟维</a>
+									</li>
+									<li data-toggle="tooltip" data-trigger="focus hover" data-placement="top" title="📝💀🕊😀">
+										<a href="#lmx" data-toggle="tab">李茂鑫</a>
+									</li>
+									<li class="dropdown">
+										<a href="#" id="ourStyle" class="dropdown-toggle" data-toggle="dropdown">风格
+											<b class="caret"></b>
+										</a>
+										<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+											<li>
+												<a href="#doveStyle" tabindex="-1" data-toggle="tab">默认</a>
+											</li>
+											<li>
+												<a href="#tqStyle" tabindex="-1" data-toggle="tab">鎏金时代</a>
+											</li>
+											<li>
+												<a href="#mqyStyle" tabindex="-1" data-toggle="tab">缤纷方块</a>
+											</li>
+											<li>
+												<a href="#zwStyle" tabindex="-1" data-toggle="tab">像素世界</a>
+											</li>
+											<li>
+												<a href="#lmxStyle" tabindex="-1" data-toggle="tab">抽象科学</a>
+											</li>
+											<li>
+												<a href="#AssonStyle" tabindex="-1" data-toggle="tab">阿松</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<div id="worksContent" class="tab-content">
+									<div id="check_work" class="wow slideInDown" data-wow-duration="0.4s">
+										<img class="img-responsive" src="works/lmx1.png" id="show_works"/>
+									</div>
+									<div class="tab-pane fade in active" id="tq">
+										<div class="col-md-4 works center-block">
+											<img class="img-responsive works_img" src="works/tq1.png" />
+											<div class="works_mask">
+												<p>唐强作品1</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq1.png" download="唐强作品1" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/tq2.png" />
+											<div class="works_mask">
+												<p>唐强作品2</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq2.png" download="唐强作品2" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/tq3.png" />
+											<div class="works_mask">
+												<p>唐强作品3</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq3.png" download="唐强作品3" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/tq4.png" />
+											<div class="works_mask">
+												<p>唐强作品4</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq4.png" download="唐强作品4" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/tq5.png" />
+											<div class="works_mask">
+												<p>唐强作品5</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq5.png" download="唐强作品5" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/tq6.png" />
+											<div class="works_mask">
+												<p>唐强作品6</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/tq6.png" download="唐强作品6" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="mqy">
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy1.png" />
+											<div class="works_mask">
+												<p>毛秋月作品1</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy1.png" download="毛秋月作品1" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy2.png" />
+											<div class="works_mask">
+												<p>毛秋月作品2</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy2.png" download="毛秋月作品2" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy3.png" />
+											<div class="works_mask">
+												<p>毛秋月作品3</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy3.png" download="毛秋月作品3" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy4.png" />
+											<div class="works_mask">
+												<p>毛秋月作品4</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy4.png" download="毛秋月作品4" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy5.png" />
+											<div class="works_mask">
+												<p>毛秋月作品5</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy5.png" download="毛秋月作品5" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/mqy6.png" />
+											<div class="works_mask">
+												<p>毛秋月作品6</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/mqy6.png" download="毛秋月作品6" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="me">
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw1.gif" />
+											<div class="works_mask">
+												<p>翟维作品1</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw1.gif" download="翟维作品1" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw2.gif" />
+											<div class="works_mask">
+												<p>翟维作品2</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw2.gif" download="翟维作品2" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw3.png" />
+											<div class="works_mask">
+												<p>翟维作品3</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw3.png" download="翟维作品3" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw4.gif" />
+											<div class="works_mask">
+												<p>翟维作品4</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw4.gif" download="翟维作品4" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw5.gif" />
+											<div class="works_mask">
+												<p>翟维作品5</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw5.gif" download="翟维作品5" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/zw6.gif" />
+											<div class="works_mask">
+												<p>翟维作品6</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/zw6.gif" download="翟维作品6" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="lmx">
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx1.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品1</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx1.png" download="李茂鑫作品1" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx2.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品2</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx2.png" download="李茂鑫作品2" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx3.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品3</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx3.png" download="李茂鑫作品3" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx4.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品4</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx4.png" download="李茂鑫作品4" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx5.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品5</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx5.png" download="李茂鑫作品5" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 works">
+											<img class="img-responsive works_img" src="works/lmx6.png" />
+											<div class="works_mask">
+												<p>李茂鑫作品6</p>
+												<p>
+													<span class="glyphicon glyphicon-sunglasses works_scale"></span>
+													&nbsp;&nbsp;
+													<svg class="icon" title="分享">
+														<use xlink:href="#icon-share-alt-solid"></use>
+													</svg>
+													&nbsp;&nbsp;
+													<a href="works/lmx6.png" download="李茂鑫作品6" class="glyphicon glyphicon-download-alt" title="下载"></a>
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="doveStyle">
+										<p>默认的网页风格</p>
+										<a type="button" class="btn btn-info" id="toDefaultStyle">启用</a>
+									</div>
+									<div class="tab-pane fade" id="tqStyle">
+										<p>唐强的鎏金时代风格</p>
+										<!--<a type="button" class="btn btn-info" id="toTqStyle" href="#topNav">启用</a>-->
+									</div>
+									<div class="tab-pane fade" id="mqyStyle">
+										<p>毛秋月的缤纷方块风格</p>
+										<a type="button" class="btn btn-info" id="colorCarton">启用</a>
+									</div>
+									<div class="tab-pane fade" id="zwStyle">
+										<p>翟维的像素达人风格</p>
+									</div>
+									<div class="tab-pane fade" id="lmxStyle">
+										<p>李茂鑫的抽象科学风格</p>
+									</div>
+									<div class="tab-pane fade" id="AssonStyle">
+										<p>阿松风格</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--联系我们模块-->
+						<div class="row" id="contact">
+							<h2 class="h2 spotlight">联系我们</h2>
+							<br />
+							<p class="lie">"我们会在第一时间给你回复"</p>
+							<br />
+							<div class="col-md-6">
+								<form>
+									<div class="form-group text-left">
+										<label for="username">您的真实姓名：</label>
+										<input class="form-control" id="username" type="text" placeholder="Name" data-toggle="tooltip" data-trigger="manual" data-placement="right" title="用户名" data-title="用户名" />
+									</div>
+									<div class="form-group text-left">
+										<label for="phone">电话号码：</label>
+										<input class="form-control" id="phone" type="tel" placeholder="Phone Number" data-toggle="tooltip" data-trigger="manual" data-placement="auto right" title="电话号码" data-title="电话号码" />
+									</div>
+									<div class="form-group text-left">
+										<label for="email">邮箱：</label>
+										<input class="form-control" id="email" type="text" placeholder="Email" data-toggle="tooltip" data-trigger="manual" data-placement="right" title="邮箱" data-title="邮箱" />
+									</div>
+									<div class="form-group text-left">
+										<label for="textarea">留言：</label>
+										<textarea class="form-control" id="textarea" cols="30" rows="10" placeholder="Message" data-toggle="tooltip" data-trigger="manual" data-placement="right" title="留言" data-title="留言"></textarea>
+									</div>
+									<button type="button" id="submit" class="submit btn btn-default pull-right">提交</button>
+								</form>
+							</div>
+
+							<div class="col-md-6 text-left">
+								<p>
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-phone-volume-solid"></use>
+									</svg>
+									电话：17378584074
+								</p>
+								<p>
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-qq-brands"></use>
+									</svg>
+									QQ:346935060/1134130067
+								</p>
+								<p>
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-comments-solid"></use>
+									</svg>
+									微信:DOVE-5154
+								</p>
+								<p>
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-envelope-solid"></use>
+									</svg>
+									邮箱:DOVE@QQ.com
+								</p>
+								<p>
+									<svg class="icon" aria-hidden="true">
+										<use xlink:href="#icon-map-marker-alt-solid"></use>
+									</svg>
+									地址：四川省绵阳市安州区
+								</p>
+								<div id="map"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="container-fluid text-center" id="footer">
+			<p>素材来自互联网，仅做学习交流使用&&write by 翟维 2020-05-20</p>
+		</footer>
+		<!--一堆模态框-->
+		<!--帮助-->
+		<div class="modal fade" id="modal_help" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">帮助</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group text-left">
+								<label for="nameForHelp">您的大名：</label>
+								<input class="form-control" id="nameForHelp" type="text" placeholder="Name" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-title="您的大名" />
+							</div>
+							<div class="form-group text-left">
+								<label for="emailForHelp">电子邮箱：</label>
+								<input class="form-control" id="emailForHelp" type="email" placeholder="Email" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-title="电子邮箱" />
+							</div>
+							<div class="form-group text-left">
+								<label for="textareaForHelp">您遇到的问题是：</label>
+								<textarea class="form-control" id="textareaForHelp" cols="30" rows="10" placeholder="Message" data-toggle="tooltip" data-trigger="manual" data-placement="right" data-title="留言问题"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="submitForHelp">提交</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<script src="https://cdn.bootcss.com/wow/1.1.2/wow.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6RtNQcnjN9GPp4ebj793GEmxx9fEMQk5"></script>
+		<script type="text/javascript" src="js/style.js"></script>
+		<script type="text/javascript" src="js/iconfont.js"></script>
+		<script type="text/javascript" src="js/iconfont2.js"></script>
+		<script type="text/javascript" src="js/jquery.singlePageNav.min.js"></script>
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript" src="js/modal.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('[data-toggle="popover"]').popover();
+				new WOW().init();
+				$("[data-toggle='tooltip']").tooltip();
+				$(".nav").singlePageNav({
+					offset: 0
+				});
+			})
+		</script>
+	</body>
+
+</html>

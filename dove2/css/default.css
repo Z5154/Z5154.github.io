@@ -1,0 +1,1044 @@
+/*通用css代码*/
+@keyframes sun{
+	100%{
+		background-position: -400% 0;
+	}
+}
+@keyframes rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+@keyframes rocket{
+	10%{
+		transform: translateY(20px);
+	}
+	100%{
+		transform: translateY(-800px);
+	}
+}
+/*毛秋月*/
+/*.logo{
+	height: 70px;
+	width: 70px;
+
+}
+.anniu>ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.anniu li{
+	width: 14px;
+	height: 14px;
+	border-radius: 100%;
+	background-color: #ccc;
+	float: left;
+	margin-right: 10px;
+}
+
+.anniu li:hover{
+	background-color: #fff;
+}
+.anniu{
+	position: absolute;
+	bottom: 30px;
+	right: 199px;
+}*/
+/*毛秋月*/
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.active{
+	background-color: deepskyblue;
+}
+/*第一部分*/
+body{
+	padding-top: 0;
+	font: 14px/1.8 "Microsoft Yahei","微软雅黑","Hiragino Sans GB","冬青黑体",tahoma,"times new roman",helvetica,arial;
+}
+#topNav{
+	/*height: 40px;*/
+	z-index: 1;
+	border: none;
+	background-color: transparent;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+#topNav .container{
+	
+}
+#topNav .navbar-nav>li>a{
+	height: 100%;
+	line-height: 60px;
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#topNav .navbar-header .navbar-brand{
+	line-height: 60px;
+	color: white;
+}
+#topNav .navbar-header .navbar-toggle{
+	margin-top: 22px;
+}
+#mynavbar >ul > li:hover{
+	background-color: deepskyblue;
+}
+#main{
+	padding: 0;
+}
+#bn{
+	height: 100vh;
+	width: auto;
+	overflow: hidden;
+}
+#main .banner_img{
+	position: absolute;
+	transition: 0.3s;
+	height: 100%;
+	width: 100%;
+	transition: 2s;
+	opacity: 0;
+	/*transform: scale(1.1,1.1);*/
+}
+#banner_icon{
+	/*display: none;*/
+	height: 100px;
+	width: auto;
+}
+#on{
+	opacity: 1!important;
+}
+#toLeft{					/*这是左侧按钮*/
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	height: 60px;
+	width: 40px;
+	font-size: 30px;
+	border: none;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+#toRight{					/*这是右侧按钮*/
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	height: 60px;
+	width: 40px;
+	font-size: 30px;
+	border: none;
+	color: white;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+#banner_choose{				/*用于选择轮播图的父容器*/
+	position: absolute;
+	/*background-color: rgba(25,25,25,0.1);*/
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 5%;
+	width: 10%;
+	bottom: 10%;
+	right: 10%;
+}
+#banner_choose li{
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	background-color: white;
+}
+#banner_choose .active{
+	transition: .1s;
+	transform: rotateX(60deg);
+}
+/*#banner_choose li:hover{
+	transform: scale(1.2,1.2);
+}*/
+#float{
+	position: absolute;
+	top: 45%;
+	left: 5%;
+	/*height: 300px;*/
+	color: white;
+}
+#float button{
+	display: inline-block;
+	transition: 0.1s;
+	margin: 10px 30px;
+	height: 50px;
+	width: 130px;
+	border: 2px solid black;
+	opacity: 0.9;
+	padding: 0;
+}
+#float button a{
+	display: inline-block;
+	line-height: 40px;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+#float button:hover{
+	/*background-color: transparent !important;*/
+	transform: scale(1.1,1.1);
+	opacity: 1;
+}
+#float button:last-child{
+	background-color: white;
+}
+#float button:first-of-type{
+	background-color: #f1c40f;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: transparent;
+}
+/*团队介绍*/
+#introduce_team{
+	position: relative;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: rgba(25,25,25,0.3);
+	background-image: url(../img/dove.jpg);
+	background-size: auto;
+	background-repeat: repeat-y;
+	text-align: center;
+	color: white;
+	
+}
+#introduce_team h2{
+	position: relative;
+	font-size: 40px;
+	letter-spacing: 1em;
+	margin-top: 0;
+}
+.h2{
+	margin-bottom: 30px;
+}
+.lie{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+}
+.lie:hover{
+	transition: 0.5s;
+	letter-spacing: 9px; 
+	text-decoration: underline;
+}
+#team{
+	border-top: deeppink 5px solid;
+	padding: 80px 0 0;
+	padding-bottom: 100px;
+}
+#icon_mask{
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	z-index: 0;
+}
+#team div:first-child img{
+	width: 100%;
+	border-radius: 15px;
+}
+#team img:nth-of-type(2){
+	display: none;
+}
+#team div:last-child{
+	padding-top: 30px;
+	height: 100%;
+}
+#team div:last-child p{
+	line-height: 30px;
+	padding: 5px;
+}
+.light{
+	/*transform: translate(-50%,-50%);*/
+	font-size: 16px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border-radius: 10px;
+	border: none;
+	padding: 5px 45px;
+	position: relative;
+	z-index: 1;
+}
+.light:hover{
+	/*transform: scale(1.1,1.1);*/
+	animation: sun 4s infinite;
+}
+.light::before{
+	content: "";
+	position: absolute;
+	left: -5px;
+	right: -5px;
+	top: -5px;
+	bottom: -5px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+	background-size: 400%;
+	border-radius: 10px;
+	filter: blur(10px);
+	z-index: -1;
+}
+.light:hover:before{
+	animation: sun 4s infinite;
+}
+.light2{
+	/*transform: translate(-50%,-50%);*/
+	font-size: 16px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border: none;
+	padding: 5px 45px;
+	position: relative;
+	z-index: 1;
+}
+.light2:hover{
+	transform: scale(1.1,1.1);
+	animation: sun 4s infinite;
+}
+.light2::before{
+	content: "";
+	position: absolute;
+	left: -5px;
+	right: -5px;
+	top: -5px;
+	bottom: -5px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+	background-size: 400%;
+	filter: blur(10px);
+	z-index: -1;
+}
+.light2:hover:before{
+	animation: sun 4s infinite;
+}
+/*队员介绍*/
+#member{
+	padding: 50px 0 0;
+}
+#introduce_member{
+	padding-top: 5%;
+	transition: 0.5s;
+	color: white;
+	position: relative;
+	background: rgba(25,25,25,1);
+	background-attachment: fixed;
+	/*background-size: cover;*/
+}
+#introduce_member .media{						/*默认框，唐强的框*/
+	cursor: pointer;
+	transition: 0.5s;
+	height: 200px;
+	overflow: hidden;
+	border: purple 3px solid;
+	border-image: url(../border/tqBorder.png) 300 300 290 round;
+	border-image-width: 60px;
+	border-image-outset: 9px;
+	background-color: rgb(49,23,43);
+	/*position: relative;
+	z-index: 3;*/
+}
+#introduce_member .media:nth-of-type(2){			/*毛秋月的框*/
+	border: rgba(231, 76, 60,1.0) 3px solid;
+	background-color: rgba(252, 66, 123,1.0);
+	border-image: url(../border/WhatForPink.png) 60 round;
+	border-image-width: 20px;
+	border-image-outset: 5px;
+}
+#introduce_member .media:nth-of-type(3){			/*翟维的框*/
+	border: rgba(39, 174, 96,1.0) 3px solid;
+	background-color: rgba(88, 177, 159,0.4);
+	border-image: url(../border/LapisLazuliMedal.png) 60 round;
+	border-image-width: 20px;
+	border-image-outset: 4px;
+}
+#introduce_member .media:nth-of-type(4){			/*李茂鑫的框*/
+	border: rgba(41, 128, 185,1.0) 3px solid;
+	background-color: rgba(52, 152, 219,1.0);
+	border-image: url(../border/AbstractScience.png) 60 round;
+	border-image-width: 20px;
+	border-image-outset: 4px;
+}
+#introduce_member .media:hover{
+	overflow: auto;
+	background-color: rgba(49,23,43,0.4);
+	height: 50vh;
+}
+#introduce_member .media:nth-of-type(2):hover{
+	background-color: rgba(252, 66, 123,0.4);
+}
+#introduce_member .media:nth-of-type(3):hover{
+	background-color: rgba(88, 177, 159,0.4);
+}
+#introduce_member .media:nth-of-type(4):hover{
+	background-color: rgba(52, 152, 219,0.4);
+	height: 50vh;
+}
+#introduce_member .media .media-heading{
+	margin-bottom: 10px;
+}
+#introduce_member .media .media-heading small{
+	color: rgba(255,255,255,0.7);
+}
+/*#introduce_member .media .media-body{
+	width: 100%;
+}*/
+#introduce_member .media p{
+	overflow: hidden;
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+}
+#introduce_member aside{
+	height: 100px;
+	background-color: deeppink;
+}
+.pop_image_left{
+	display: none;
+	position: fixed;
+	left: -50px;
+	bottom: 0px;
+	z-index: 1;
+	pointer-events: none;
+}
+.pop_image_right{
+	display: none;
+	position: fixed;
+	right: 0px;
+	top: 100px;
+	z-index: 1;
+	pointer-events: none;
+}
+.longText{
+	margin-top: 50px;
+	
+}
+/*服务项目*/
+#Service{
+	margin: 0;
+	background: rgba(25,25,25,1);
+	color: white;
+	padding: 5% 0px;
+}
+#Service .row{
+	margin: 0;
+}
+.mask{
+	transition: top,left,right,bottom,opacity,transform 0.2s;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	/*height: 100%;
+	width: 100%;*/
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	z-index: -1;
+	transform:translateY(100px);
+	
+}
+.mask div{
+	padding: 0;
+}
+.mask p{
+	margin: 20px 0 40px;
+	background-color: rgba(0,0,0,0.3);
+	padding: 20px 10px;
+}
+.mask h1{
+	margin-bottom: 50px;
+	font-weight: bold;
+	color: rgb(255,219,20);
+}
+.mask h1 small{
+	font-size: 0.5em;
+	color: rgb(255,219,20);
+}
+.mask h2{
+	font-size: 1.5em;
+	margin-top: 30px;
+	margin-bottom: 100px;
+	font-weight: bold;
+	color: rgb(255,219,20);
+}
+#Service .mask{
+	top: 30px;
+	left: 30px;
+	bottom: 30px;
+	right: 30px;
+}
+.service_img{
+	padding: 30px;
+	overflow: hidden;
+/*	background-color: deepskyblue;*/
+}
+.service_img div{
+	/*position: relative;*/
+	overflow: hidden;
+}
+.service_img div img{
+	cursor: pointer;
+	filter: grayscale(100%);
+}
+.service_img div:hover img{
+	filter: grayscale(0%);
+}
+.service_img div:hover>.mask{
+	z-index: 0;
+	transform:translateY(0px);
+}
+
+/*作品展示模块*/
+#works{
+	padding: 0 100px;
+}
+#ourWorks{
+	border: none;
+}
+#ourWorks .active{
+	background-color: transparent;
+}
+#ourWorks li a{				/*标签页选项a标签样式*/
+	color: white;
+	border: 1px solid white;
+	border-radius: 0px;
+}
+#ourWorks li a:hover{
+	color: black;
+}
+#ourWorks li.active a{
+	color: black;
+}
+#ourWorks .dropdown-menu li a{			/*下拉菜单中的a标签样式*/
+	color: white;
+}
+#ourWorks .dropdown-menu li a:hover{
+	color: black;
+}
+#ourWorks .dropdown-menu{
+	background-color: transparent;
+}
+.open #ourStyle{			/*激活状态下的下拉菜单按钮样式*/
+	color: black;
+}
+#worksContent{
+	float: left;
+	width: 100%;
+}
+#worksContent .active{					/*工作内容在激活状态下的样式*/
+	background-color: transparent;
+	border: 1px solid white;
+}
+#worksContent>div{
+	float: left;
+	width: 100%;
+}
+.works{
+	border: 1px solid white;
+	max-height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	/*border-radius: 3px;*/
+}
+.works .works_mask{
+	height: 30%;
+	/*width: 100%;*/
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+	background-color: rgba(255,255,255,0.9);
+	position: absolute;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 3%;
+	transition: .3s;
+	transform: translateY(100%);
+}
+.works:hover .works_mask{
+	transform: translateY(0%);
+}
+.works .works_mask p{
+	margin: 0;
+	display: inline-block;
+}
+.works svg{
+	color: black;
+	cursor: pointer;
+}
+.works a{
+	color: black;
+}
+.works a:hover{
+	color: black;
+	text-decoration: none;
+}
+#check_work{			/*这是用来检查大图的容器*/
+	max-width: 70%;
+	width: auto;
+	display: flex;
+	padding: 2%;
+	border: 1px solid white;
+	background-color: rgba(25,25,25,1);
+	left: 15%;
+	position: absolute;
+	top:5%;
+	z-index: 1;
+	display: none;
+}
+.works_scale:hover{
+	cursor: pointer;
+	transform: scale(1.2,1.2);
+}
+/*联系我们*/
+#contact{
+	padding: 0px 100px;
+}
+#contact form  .form-control{
+	border: 1px solid white;
+	background-color: rgb(25,25,25);
+	font-size: 1em;
+	color: white;
+	border-radius: 0px;
+}
+#contact fieldset{
+	text-align: start;
+	min-width: none;
+	padding: 10px;
+	margin: auto;
+	border: 1px solid white;
+}
+#contact .btn-default{
+	transition: 0.1s;
+	color: white;
+	border-radius: 0px;
+	height: 50px;
+	width: 120px;
+	border: none;
+	background-color: rgb(50,50,50);
+}
+#contact .btn-default:hover{
+	background-color: deepskyblue;
+}
+#contact .lie{
+	margin-bottom: 5%;
+}
+#contact >div > p{
+	font-weight: 700;
+}
+#contact >div > p >svg{
+	font-size: 1.5em;
+}
+#map{
+	margin-top: 100px;
+	height: 200px;
+}
+/*侧边固定导航*/
+#cbList_container{
+	transition: 0.3s;
+	list-style: none;
+	position: fixed;
+	z-index: 10;
+	right: 0px;
+	bottom: 5%;
+	padding: 0;
+	overflow:hidden;
+	height: 40px;
+}
+#cbList_container li{
+	transition: 0.1s;
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	font-size: 25px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background-color:#2f3640;
+	cursor: pointer;
+	
+}
+#cbList_container li:hover{
+	transform: scale(1.1,1.1) rotate(-25deg);
+}
+#cbList_container li:nth-child(2){
+	background-color:#fbc531;
+}
+#cbList_container li:nth-child(3){
+	background-color: #40739e;
+}
+#cbList_container li:nth-child(4){
+	background-color: #44bd32;
+}
+#cbList_container li:nth-child(5){
+	background-color: #273c75;
+}
+#cbList_container li:nth-child(6){
+	background-color: #e44114;
+}
+#cbList_container li:nth-child(7){
+	background-color: #00a4ff;
+}
+#cbList_container #toTop:hover{
+	transform: scale(1.1,1.1) rotate(0deg);
+}
+.cbList{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 40px;
+	color: white;
+}
+.cbList:hover{		/*清除a标签样式*/	
+	color: white;
+}
+#conf svg{
+	animation: 2.5s linear rotate infinite;
+}
+#conf:hover svg{
+	animation: 1s linear rotate infinite;
+}
+/*底部*/
+#footer{
+	height: 40px;
+	line-height: 40px;
+	background-color: #101010;
+	color: white;
+}
+
+
+/*标题聚光灯*/
+
+.spotlight{
+	position: relative;
+	color: transparent;
+	display: inline-block;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: url(../titleImg/crystal.jpg);
+	background-repeat: repeat-x;
+	background-position: 500% 100%;
+	animation: 20s title linear infinite;
+	animation-direction: alternate;
+	text-shadow: 0px 0px 8px rgba(255,255,255,0.3);
+	letter-spacing: 1em;
+	/*z-index: 0;*/
+}
+.spotlight2{
+	position: relative;
+	display: inline-block;
+}
+.spotlight2:after{
+	content: "我们的团队";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e64de,#4cd137,#e44114);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+.spotlight3{
+	position: relative;
+	display: inline-block;
+}
+.spotlight3:after{
+	content: "服务项目";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e64de,#4cd137,#e44114);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+.spotlight4{
+	position: relative;
+	display: inline-block;
+}
+.spotlight4:after{
+	content: "联系我们";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e64de,#4cd137,#e44114);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+
+@keyframes jgdx{
+	0%{
+		clip-path: circle(50px at 0% 50%);
+		-webkit-clip-path: circle(50px at 0% 50%);
+		
+	}
+	50%{
+		clip-path: circle(50px at 100% 50%);
+		-webkit-clip-path: circle(50px at 100% 50%);
+		
+	}
+	100%{
+		clip-path: circle(50px at 0% 50%);
+		-webkit-clip-path: circle(50px at 0% 50%);
+		
+	}
+}
+@keyframes title{
+	from{background-position: -500% 100%;}
+	to{background-position: 500% 100%;}
+}
+/*加载动画*/
+#loading{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background-color: rgba(25,25,25,1);
+	display: flex;
+	/*display: none;*/
+	align-items: center;
+	justify-content: center;
+}
+.loading_item{
+	display: none;
+}
+#loading_default{
+	height: 80px;
+	width: 190px;
+	display: inline-block;
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+	background-repeat: no-repeat;
+	animation: 2s ease-in loading_default infinite;
+}
+@keyframes  loading_default{
+	0%{
+		background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px;
+	}
+	10%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+	}
+	20%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+	}
+	30%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	40%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	50%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	60%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	70%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	80%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px;
+		
+	}
+	90%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px;
+		
+	}
+	100%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px;
+		
+	}
+}
+@-webkit-keyframes loading_default{
+	0%{
+		background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px;
+	}
+	10%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+	}
+	20%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+	}
+	30%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+		background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	40%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	50%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	60%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	70%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px,10px 0px;
+		
+	}
+	80%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px,10px 0px;
+		
+	}
+	90%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px,10px 0px;
+		
+	}
+	100%{
+	background: linear-gradient(#FF5722, #FF5722) 0 100%,linear-gradient(#FF5252, #FF5252) 20px 100%,linear-gradient(#FF4081, #FF4081) 40px 100%,linear-gradient(#2196F3, #2196F3) 60px 100%,linear-gradient(#03A9F4, #03A9F4) 80px 100%,linear-gradient(#FFEB3B, #FFEB3B) 100px 100%,linear-gradient(#4CAF50, #4CAF50) 120px 100%,linear-gradient(#8BC34A, #8BC34A) 140px 100%,linear-gradient(#FFC107,#FFC107) 160px 100%,linear-gradient(#9C27B0,#9C27B0) 180px 100%;
+	background-repeat: no-repeat;
+		background-size: 10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 0px,10px 80px;
+		
+	}
+}
+/*************************
+ *********模态框**********
+ *************************/
+/*默认样式、默认样式应该与当前页面风格是协调的*/
+.modal-content{
+	color: white;
+	background-color: rgb(25,25,25);
+	border-radius: 0;
+}
+.modal-body form  .form-control{
+	border: 1px solid white;
+	background-color: rgb(25,25,25);
+	font-size: 1em;
+	color: white;
+	border-radius: 0px;
+}
+.modal-body fieldset{
+	text-align: start;
+	min-width: none;
+	padding: 10px;
+	margin: auto;
+	border: 1px solid white;
+}
+.modal-header .close{
+	opacity: 1;
+	color: white;
+}
+.modal-footer .btn-default{
+	transition: 0.1s;
+	color: white;
+	border-radius: 0px;
+	border: none;
+	background-color: rgb(50,50,50);
+}
+.modal-footer .btn-primary{
+	transition: 0.1s;
+	color: white;
+	border-radius: 0px;
+	border: none;
+	background-color: rgb(50,50,50);
+}
+.modal-footer .btn-default:hover{
+	background-color: deepskyblue;
+}
+.modal-footer .btn-primary:hover{
+	
+	background-color: deepskyblue;
+}
+/*************************
+ *********工具提示**********
+ *************************/
+/*默认主题下的工具提示样式*/
+.tooltip{
+	min-width: 200px;
+	max-width: 400px;
+	line-height: 40px;
+	z-index: 10;
+}
+.tooltip-inner{
+	min-height: 40px;
+	border: 1px solid white;
+}
+.tooltip.right .tooltip-arrow{
+	border-right-color: white;
+}
+.tooltip.left .tooltip-arrow{
+	border-left-color: white;
+}
+.tooltip.top .tooltip-arrow{
+	border-top-color: white;
+}
+.tooltip.bottom .tooltip-arrow{
+	border-bottom-color: white;
+}

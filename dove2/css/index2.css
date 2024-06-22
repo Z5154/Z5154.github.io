@@ -1,0 +1,614 @@
+/*通用css代码*/
+@keyframes sun{
+	100%{
+		background-position: -400% 0;
+	}
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.active{
+	background-color: deepskyblue;
+}
+/*第一部分*/
+body{
+	padding-top: 0;
+	font: 14px/1.8 "Microsoft Yahei","微软雅黑","Hiragino Sans GB","冬青黑体",tahoma,"times new roman",helvetica,arial;
+}
+#topNav{
+	/*height: 80px;*/
+	z-index: 1;
+	border: none;
+	background-color: transparent;
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+#topNav .container{
+	
+}
+#topNav .navbar-nav>li>a{
+	height: 100%;
+	line-height: 60px;
+	color: white;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#topNav .navbar-header .navbar-brand{
+	line-height: 60px;
+	color: white;
+}
+#topNav .navbar-header .navbar-toggle{
+	margin-top: 22px;
+}
+#mynavbar >ul > li:hover{
+	background-color: deepskyblue;
+}
+#main{
+	padding: 0;
+}
+#bn{
+	height: 100vh;
+	width: auto;
+	overflow: hidden;
+}
+#main .banner_img{
+	position: absolute;
+	transition: 0.3s;
+	height: 100%;
+	width: 100%;
+	transition: 2s;
+	opacity: 0;
+	/*transform: scale(1.1,1.1);*/
+}
+#on{
+	opacity: 1!important;
+}
+#toLeft{
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	height: 60px;
+	width: 40px;
+	font-size: 30px;
+	border: none;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 0;
+}
+#toRight{
+	z-index: 1;
+	background-color: rgba(0,0,0,0.5);
+	height: 60px;
+	width: 40px;
+	font-size: 30px;
+	border: none;
+	color: white;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+#float{
+	position: absolute;
+	top: 55%;
+	left: 5%;
+	height: 300px;
+	color: white;
+}
+#float button{
+	display: inline-block;
+	transition: 0.1s;
+	margin: 10px 30px;
+	height: 50px;
+	width: 130px;
+	border: 2px solid black;
+	opacity: 0.9;
+	padding: 0;
+}
+#float button a{
+	display: inline-block;
+	line-height: 40px;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+#float button:hover{
+	/*background-color: transparent !important;*/
+	transform: scale(1.1,1.1);
+	opacity: 1;
+}
+#float button:last-child{
+	background-color: white;
+}
+#float button:first-of-type{
+	background-color: #f1c40f;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: transparent;
+}
+/*团队介绍*/
+#introduce_team{
+	position: relative;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: rgba(25,25,25,0.3);
+	background-image: url(../img/dove.jpg);
+	background-size: auto;
+	background-repeat: repeat-y;
+	text-align: center;
+	color: white;
+	
+}
+#introduce_team h2{
+	position: relative;
+	font-size: 40px;
+	letter-spacing: 1em;
+	margin-top: 0;
+}
+.h2{
+	margin-bottom: 30px;
+}
+.lie{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+}
+.lie:hover{
+	transition: 0.5s;
+	letter-spacing: 9px; 
+	text-decoration: underline;
+}
+#team{
+	border-top: deeppink 5px solid;
+	padding: 80px 0 0;
+	padding-bottom: 100px;
+}
+#icon_mask{
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	right: 0px;
+	z-index: 0;
+}
+#team div:first-child img{
+	width: 100%;
+	border-radius: 15px;
+}
+#team div:last-child{
+	padding-top: 30px;
+	height: 100%;
+}
+#team div:last-child p{
+	line-height: 30px;
+	padding: 5px;
+}
+.light{
+	/*transform: translate(-50%,-50%);*/
+	font-size: 16px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border-radius: 10px;
+	border: none;
+	padding: 5px 45px;
+	position: relative;
+	z-index: 1;
+}
+.light:hover{
+	/*transform: scale(1.1,1.1);*/
+	animation: sun 4s infinite;
+}
+.light::before{
+	content: "";
+	position: absolute;
+	left: -5px;
+	right: -5px;
+	top: -5px;
+	bottom: -5px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+	background-size: 400%;
+	border-radius: 10px;
+	filter: blur(10px);
+	z-index: -1;
+}
+.light:hover:before{
+	animation: sun 4s infinite;
+}
+.light2{
+	/*transform: translate(-50%,-50%);*/
+	font-size: 16px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+	background-size: 400%;
+	border: none;
+	padding: 5px 45px;
+	position: relative;
+	z-index: 1;
+}
+.light2:hover{
+	transform: scale(1.1,1.1);
+	animation: sun 4s infinite;
+}
+.light2::before{
+	content: "";
+	position: absolute;
+	left: -5px;
+	right: -5px;
+	top: -5px;
+	bottom: -5px;
+	background: linear-gradient(90deg,#03a9f4,#f441a5,#03a9f4);
+	background-size: 400%;
+	filter: blur(10px);
+	z-index: -1;
+}
+.light2:hover:before{
+	animation: sun 4s infinite;
+}
+/*队员介绍*/
+#member{
+	padding: 50px 0 0;
+}
+#introduce_member{
+	padding-top: 5%;
+	transition: 0.5s;
+	color: white;
+	position: relative;
+	background: rgba(25,25,25,1);
+	/*background-size: cover;*/
+}
+#introduce_member .media{
+	cursor: pointer;
+	transition: 0.5s;
+	height: 200px;
+	overflow: hidden;
+	border: purple 3px solid;
+	background-color: rgb(49,23,43);
+}
+#introduce_member .media:nth-of-type(2){
+	border: rgba(231, 76, 60,1.0) 3px solid;
+	background-color: rgba(252, 66, 123,1.0);
+}
+#introduce_member .media:nth-of-type(3){
+	border: rgba(39, 174, 96,1.0) 3px solid;
+	background-color: rgba(88, 177, 159,0.4);
+}
+#introduce_member .media:nth-of-type(4){
+	border: rgba(41, 128, 185,1.0) 3px solid;
+	background-color: rgba(52, 152, 219,1.0);
+}
+#introduce_member .media:hover{
+	overflow: auto;
+	background-color: rgba(49,23,43,0.4);
+	height: 50vh;
+}
+#introduce_member .media:nth-of-type(2):hover{
+	background-color: rgba(252, 66, 123,0.4);
+}
+#introduce_member .media:nth-of-type(3):hover{
+	background-color: rgba(88, 177, 159,0.4);
+}
+#introduce_member .media:nth-of-type(4):hover{
+	background-color: rgba(52, 152, 219,0.4);
+	height: 50vh;
+}
+#introduce_member .media .media-heading{
+	margin-bottom: 10px;
+}
+#introduce_member .media .media-heading small{
+	color: rgba(255,255,255,0.7);
+}
+/*#introduce_member .media .media-body{
+	width: 100%;
+}*/
+#introduce_member .media p{
+	overflow: hidden;
+	/*white-space: nowrap;*/
+	text-overflow: ellipsis;
+}
+#introduce_member aside{
+	height: 100px;
+	background-color: deeppink;
+}
+.pop_image_left{
+	display: none;
+	position: fixed;
+	left: -50px;
+	bottom: 0px;
+	z-index: 3;
+}
+.pop_image_right{
+	display: none;
+	position: fixed;
+	right: 0px;
+	top: 100px;
+	z-index: 3;
+}
+.longText{
+	margin-top: 50px;
+	
+}
+/*服务项目*/
+#Service{
+	margin: 0;
+	background: rgba(25,25,25,1);
+	color: white;
+	padding: 5% 0px;
+}
+#Service .row{
+	margin: 0;
+}
+.mask{
+	transition: top,left,right,bottom,opacity,transform 0.2s;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	/*height: 100%;
+	width: 100%;*/
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	z-index: -1;
+	transform:translateY(100px);
+	
+}
+.mask div{
+	padding: 0;
+}
+.mask p{
+	margin: 20px 0 40px;
+	background-color: rgba(0,0,0,0.3);
+	padding: 20px 10px;
+}
+.mask h1{
+	margin-bottom: 50px;
+	font-weight: bold;
+	color: rgb(255,219,20);
+}
+.mask h1 small{
+	font-size: 0.5em;
+	color: rgb(255,219,20);
+}
+.mask h2{
+	font-size: 1.5em;
+	margin-top: 30px;
+	margin-bottom: 100px;
+	font-weight: bold;
+	color: rgb(255,219,20);
+}
+#Service .mask{
+	top: 30px;
+	left: 30px;
+	bottom: 30px;
+	right: 30px;
+}
+.service_img{
+	padding: 30px;
+	overflow: hidden;
+/*	background-color: deepskyblue;*/
+}
+.service_img div{
+	/*position: relative;*/
+	overflow: hidden;
+}
+.service_img div img{
+	cursor: pointer;
+	filter: grayscale(100%);
+}
+.service_img div:hover img{
+	filter: grayscale(0%);
+}
+.service_img div:hover>.mask{
+	z-index: 0;
+	transform:translateY(0px);
+}
+/*联系我们*/
+#contact{
+	padding: 0px 100px;
+}
+#contact form  .form-control{
+	border: 1px solid white;
+	background-color: rgb(25,25,25);
+	font-size: 1em;
+	color: white;
+	border-radius: 0px;
+}
+#contact fieldset{
+	text-align: start;
+	min-width: none;
+	padding: 10px;
+	margin: auto;
+	border: 1px solid white;
+}
+#contact .btn-default{
+	transition: 0.2s;
+	color: white;
+	border-radius: 0px;
+	height: 50px;
+	width: 120px;
+	border: none;
+	background-color: rgb(50,50,50);
+}
+#contact .btn-default:hover{
+	background-color: deepskyblue;
+}
+#contact .lie{
+	margin-bottom: 5%;
+}
+#contact >div > p{
+	font-weight: 700;
+}
+#contact >div > p >svg{
+	font-size: 1.5em;
+}
+#map{
+	margin-top: 100px;
+	height: 200px;
+}
+/*侧边固定导航*/
+#cbList_container{
+	transition: 0.3s;
+	list-style: none;
+	position: fixed;
+	z-index: 10;
+	right: 0px;
+	bottom: 5%;
+	padding: 0;
+	overflow: hidden;
+	height: 40px;
+}
+#cbList_container li{
+	transition: 0.1s;
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	font-size: 25px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background-color:#2f3640;
+	cursor: pointer;
+}
+#cbList_container li:hover{
+	transform: scale(1.1,1.1) rotate(-25deg);
+}
+#cbList_container li:nth-child(2){
+	background-color:#fbc531;
+}
+#cbList_container li:nth-child(3){
+	background-color: #40739e;
+}
+#cbList_container li:nth-child(4){
+	background-color: #44bd32;
+}
+#cbList_container li:nth-child(5){
+	background-color: #273c75;
+}
+#cbList_container li:nth-child(6){
+	background-color: #e84118;
+}
+#cbList_container li:nth-child(7){
+	background-color: #00a8ff;
+}
+.cbList{
+	display: block;
+	height: 100%;
+	width: 100%;
+	line-height: 40px;
+	color: white;
+}
+.cbList:hover{		/*清除a标签样式*/	
+	color: white;
+}
+/*底部*/
+#footer{
+	height: 80px;
+	line-height: 80px;
+	background-color: #101010;
+	color: white;
+}
+
+
+/*标题聚光灯*/
+
+
+/*h2{
+	display: flex;
+	display:-webkit-flex;
+	align-items: center;
+	justify-content: center;
+}*/
+.spotlight{
+	position: relative;
+	display: inline-block;
+}
+.spotlight:after{
+	content: "鸽子工作室";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e68de,#4cd137,#e84118);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+.spotlight2{
+	position: relative;
+	display: inline-block;
+}
+.spotlight2:after{
+	content: "我们的团队";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e68de,#4cd137,#e84118);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+.spotlight3{
+	position: relative;
+	display: inline-block;
+}
+.spotlight3:after{
+	content: "服务项目";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e68de,#4cd137,#e84118);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+.spotlight4{
+	position: relative;
+	display: inline-block;
+}
+.spotlight4:after{
+	content: "联系我们";
+	color: transparent;
+   	position:absolute;
+    left:0;
+    top:0;
+	background: -webkit-linear-gradient(left,#c23616,#192a56,#00d2d3,#ff1232,#6d214f,#2e68de,#4cd137,#e84118);
+    background-clip:text;
+    -webkit-background-clip:text;
+    clip-path:circle(50px at 0% 50%);
+    -webkit-clip-path: circle(50px at 0% 50%);
+    animation: jgdx 5s infinite;
+}
+
+@keyframes jgdx{
+	0%{
+		clip-path: circle(50px at 0% 50%);
+		-webkit-clip-path: circle(50px at 0% 50%);
+		
+	}
+	50%{
+		clip-path: circle(50px at 100% 50%);
+		-webkit-clip-path: circle(50px at 100% 50%);
+		
+	}
+	100%{
+		clip-path: circle(50px at 0% 50%);
+		-webkit-clip-path: circle(50px at 0% 50%);
+		
+	}
+} 

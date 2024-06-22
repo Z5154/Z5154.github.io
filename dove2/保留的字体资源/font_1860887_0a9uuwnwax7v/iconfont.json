@@ -1,0 +1,37 @@
+{
+  "id": "1860887",
+  "name": "鸽子队期末项目icon补足",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3615826",
+      "name": "游戏",
+      "font_class": "game",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5328004",
+      "name": "询问",
+      "font_class": "shouye2",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8467043",
+      "name": "火箭",
+      "font_class": "huojian",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "10651243",
+      "name": "门",
+      "font_class": "men",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    }
+  ]
+}
