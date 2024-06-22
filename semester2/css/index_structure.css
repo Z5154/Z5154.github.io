@@ -1,0 +1,847 @@
+body{
+	background-color: #2F3238;
+	font-family: "comic sans ms","microsoft yahei","微软雅黑";
+	cursor: url("pointer/Glows_Normal.cur"),default;
+	margin: 6px auto;
+}
+ul,li,a{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.toColor{
+	color: #EBEBEB;
+}
+.toColorb{
+	color: rgba(0, 100, 200, 1);
+}
+.toColorc{
+	color: rgb(255,135,220);
+}
+.toButton{
+	background-color: rgba(0,100,200,0.5);
+	border-radius: 5px;
+	border-bottom: #1E90FF 3px solid;
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}	/*伪元素是行内元素 正常浏览器清除浮动方法*/
+.toTv{
+	animation: Tvplay 1s;
+	animation-fill-mode: forwards;
+}
+/*动画*/
+/*弹出框动画*/
+@keyframes popin{
+	from{border-color: transparent;background-color: rgba(255,255,255,0.3);top: 110px;}
+	to{border-color: rgba(0,62,101,0.5);background-color: rgba(0,0,0,0.5);top: 65px;}
+}
+/*元素抖动动画*/
+@keyframes jitter{
+	0%{}
+	25%{transform: rotate(10deg);}
+	50%{transform: rotate(-10deg);}
+	/*80%{transform: rotate(10deg);}
+	94%{transform: rotate(-5deg);}
+	100%{transform: rotate(0deg);}*/
+	75%{transform:rotate(10deg)}
+	100%{transform: rotate(0deg);}
+}
+/*电视播放动画*/
+@keyframes TVplay{
+	0%{width: 0px;height: 0px;padding: 2px;}
+	25%{height: 0px;width:370px;padding: 2px;}
+	50%{height:370px;padding: 2px;}
+	75%{background-color: deeppink;top: 60px;}
+	100%{top: 100px;border-radius: 3px;background-color: deeppink;padding: 2px;}
+}
+/*加载动画*/
+@keyframes loading{
+	0%{left: 0px;/*transform: rotate(0);*/}
+	25%{left: 300px;transform: rotate(360deg);}
+	50%{left: 300px;transform: rotate(1080deg);}
+	75%{left:0px;transform: rotate(0deg);}
+	100%{left: 0px;background-color: deeppink;}
+}
+/*一个类，用来绑定抖动动画*/
+/*主容器*/
+#content{
+	width: 1220px;
+	color: lightskyblue;
+	margin: 0 auto;
+}
+/*代码雨*/
+#codeRain{
+	position: fixed;
+	top: -3px;
+	z-index:-2;
+}
+/*导航、logo、天气插件*/
+#header{
+	/*background-color: crimson;*/
+	box-shadow: 0px 5px deepskyblue inset;
+}
+#header>section{
+	margin-top: 5px;
+	/*background-color: deepskyblue;*/
+	float: left;
+	width: 1220px;
+}
+#header>section>canvas{
+	width: 120px;
+	height: 60px;
+	float: left;
+	/*background-color: white;*/
+	margin: 20px;
+}
+#header>section>div{
+	height: 60px;
+	float: right;
+	/*background-color: pink;*/
+	width: 300px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+}
+/*#header>section>iframe{
+	float:right;
+	margin:2%;
+	width:300px;
+	height: 30px;
+	display: none;
+}*/
+#header>section>nav{
+	height: 65px;
+	width: 1220px;
+	float: left;
+	background-color: transparent;
+}
+.mainnav{
+	background-color: rgba(38,41,46,1);
+	float: left;
+	color:white;
+	line-height: 65px;
+	width: 11%;
+	text-align: center;
+	font-family:"arial, helvetica, sans-serif";
+	font-size: 18px;
+	position: relative;
+}
+.mainnav:first-child{
+	margin-left: 50px;
+}
+.mainnav:hover{
+	color: deepskyblue;
+	background-color: transparent;
+	box-shadow: 0px 4px rgba(0,100,200,1) inset;
+	transform: 0.5s;
+}
+#mainnav{
+	position: relative;
+}
+/*弹出框*/
+.pop{
+	position: absolute;
+	border:rgba(0,62,101,1) 3px solid;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.3);
+	width: 96%;
+	top: 110px;
+	display: none;
+	z-index: 2;
+}
+.pop>li{
+	height: 40px;
+	line-height: 40px;
+	font-size: 12px;
+	color: white;
+}
+.pop>li:first-child{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.pop>li:last-child{
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.pop>li>a:hover{
+	outline: none;
+	text-decoration: underline;
+}
+.pop_li:hover{
+	background-color: deepskyblue;
+	color: white;
+}
+/*搜索*/
+#search{
+	float: left;
+	color:white;
+	line-height: 65px;
+	margin-left: 30px;
+	text-align: center;
+	font-family:"arial, helvetica, sans-serif";
+	font-size: 30px;
+}
+#search:hover{
+	color: deepskyblue;
+	transition: 0.5s;
+}
+#search-text{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	top: 65px;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.6s;
+	line-height: 4em;
+	display: none;
+}
+#search-text input{
+	height: 100%;
+	padding: 0px 30px;
+	width: 80%;
+	border: none;
+	font-size: 1.3em;
+	color: rgba(0,62,101,1);
+	float: left;
+}
+#search-close{
+	display: block;
+	float: right;
+	margin-right: 30px;
+	font-size: 2em;
+	transition: 0.5s;
+}
+#search-close:hover{
+	color: deeppink;
+	animation: jitter 0.5s;
+}
+/*轮播图*/
+#shuffling-container{
+	height: 480px;
+	width: 1220px;
+	/*background-color: aqua;*/
+	position: relative;
+}
+.shuffling{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	transition: 1s;
+}
+#on{			/*控制轮播图显隐*/
+	opacity: 1;
+}
+#shuffling-container>button{
+	background: rgba(0,0,0,0.3);
+	color: rgba(255,255,255,0.3);
+	line-height: 30px;
+	font-size: 30px;
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	border: none;
+}
+#shuffling-container>button:hover{
+	background-color: rgba(0,0,0,0.4);
+	color: deepskyblue;
+	transition: 0.3s;
+}
+#leftButton{
+	left: 0;
+	top: 40%;
+}
+#rightButton{
+	right: 0;
+	top: 40%;
+}
+/*课程子导航*/
+#subnav-container{
+	width:800px;
+	height: 90px;
+	background-color: rgba(0,62,101,1);
+	position: relative;
+	top: -45px;
+	left: 210px;
+	float:left;
+}
+#subnav{
+	width:700px;
+	height:90px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+}
+#subnav>li{	/*课程子导航li元素通用样式*/
+	float: left;
+	width:20%;
+	line-height: 90px;
+	text-align: center;
+	letter-spacing: 2px;
+	font-size: 18px;
+}
+#subnav>li>span{
+	margin-left: 20px;
+	font-size: 35px;
+}
+#subnav>span{
+	font-size: 50px;
+	margin-right: 5px;
+	text-align: center;
+	float: left;
+	position: relative;
+	top: 22%;
+	margin-left: 25px;
+}
+
+/*课程菜单*/
+#lesson-container{
+	height: 500px;
+	width: 800px;
+	/*background-color: yellow;*/
+	margin: 0 auto;
+}
+.lesson{
+	float: left;
+	height: 35%;
+	width: 33.3%;
+	background-color: transparent;
+	/*background-color:rgba(38,41,42,0.5);*/
+	line-height: 100%;
+}
+.lesson>img{
+	margin-top:38px ;
+	border-radius: 50%;
+	/*background-color: #0000FF;*/
+	width: 85px;
+	height:85px;
+	float: left;
+}
+.lesson>aside{
+	margin-left: 5px;
+	width: 65%;
+	/*background-color: yellow;*/
+	float: left;
+	margin-top: 38px;
+}
+.lesson>aside>a{
+	display: inline-block;
+	 font-weight: bold;
+}
+.lesson>aside>a:hover{
+	transform: 0.5;
+	color: deeppink;
+	letter-spacing: 3px;
+}
+.lesson>aside>p
+{
+	font-size: 12px;
+	color: #EBEBEB;
+}
+/*学生评价*/
+#eva-container{
+	padding-top:60px;
+	width: 1220px;
+	height: 1035px;
+	position: relative;
+	/*background-color: deeppink;*/
+}
+#eva-container>section{
+	width: 60%;
+	margin: 0 auto 8%;
+	/*background-color:rgba(38,41,42,0.5);*/
+	text-align: center;
+}
+#eva-container>div:first-child{		/*蒙版*/
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	position: absolute;
+	background-color:rgba(0,0,0,0.5);
+	z-index: -1;
+}
+#eva-container>div:first-child+div{		/*蒙版*/
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	position: absolute;
+	background-image: url(../img/class.jpg);
+	z-index: -2;
+}
+#eva-container>section>p{
+	font-size: 20px;
+	font-weight: 300;
+	text-overflow:clip;
+	margin: 10px 0;
+}
+#eva-container>div{
+	margin: 0 auto;
+	width: 800px;
+}
+#eva-container>div:last-child{
+	margin-top: 4%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 140px;
+}
+#eva-container>div>button{		/*学生评价的See More按钮的样式*/
+	height: 50px;
+	width: inherit;
+	color: white;
+	font-size: 25px;
+	line-height: 50px;
+	
+	/*font-family: "bookman old style";*/
+}
+.stu-eva{			/*学生评价框的样式*/
+	width: 45%;
+	margin: 20px;
+	/*outline: #8A2BE2 2px solid;*/
+	float: left;
+}
+.stu-eva>div{		/*学生评价框内部样式div*/
+	width: 70%;
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 30px;
+}
+.stu-eva>div>h5{
+	margin: 0 0 auto;
+}
+.stu-eva>div>p{
+	font-size: 12px;
+	line-height: 25px;
+}
+.stu-eva>img{
+	margin-left: 2px;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: block;
+	float: left;
+}
+.img_eva{
+	box-shadow: 0px 0px 0px 2px transparent;
+}
+/*最受欢迎的课程*/
+#popular-container{
+	width: 1220px;
+	margin: 0 auto;
+	background-color: rgba(38,41,46,1);
+	text-align: center;
+	padding-top: 1px;
+}
+#popular-container>section{
+	width: 60%;
+	margin: 4% auto 8%;
+	/*background-color: #ADFF2F;*/
+	text-align: center;
+}
+#popular-container>aside{
+	float: left;
+	width: 45%;
+	margin: 10px 20px;
+	background-color:rgba(47,50,56,1);
+	/*outline: #00BFFF 1px solid;*/
+}
+#popular-container>aside>div{
+	width: 50%;
+	float: left;
+	height: 300px;
+	position: relative;
+	/*outline: #00BFFF 1px solid;*/
+}
+#popular-container>div:last-child{		/*最受欢迎的课程的下方的视频栏*/
+	width: 100%;
+	height: auto;
+	float: left;
+	/*background-color: #CCC;*/
+	/*outline: #00BFFF 1px solid;*/
+}
+#popular-container>aside>div>p{
+	line-height: 1.6em;
+	text-align: left;
+	margin-left: 5px;
+	font-size: 15px;
+}
+.rotateing:hover>.rotate{
+	display: block;
+	transform: rotateY(360deg);
+	opacity: 0.8;
+}
+.rotate{
+	color: white;
+	font-size: 30px;
+	transition: 0.8s;
+	opacity: 0;
+	background: deeppink;
+	position: absolute;
+	line-height: 300px;
+	height: 100%;
+	width: 100%;
+}
+
+#popular-container>aside>div>img{
+	height: 100%;
+	width: 100%;
+	background-color:rgba(38,41,42,0.5);
+}
+#popular-container>aside>div>button{
+	color: white;
+	height: 35px;
+	font-size: 16px;
+}
+.ad{
+	width: 15%;
+	height: 120px;
+	float: left;
+	/*background-color: #FF1493;*/
+	margin:5% 50px;
+}
+.video{
+	height: 100%;
+	width: 100%;
+	border-radius: 3px;
+	outline: #00BFFF 1px solid;
+}
+/*页脚、预约、和版权*/
+#footer{
+	margin-top: 100px;
+	margin-bottom: 100px;
+	width: 1220px;
+	/*background-color: #232323;*/
+	text-align: center;
+	padding-top:1px ;
+}
+#footer a{
+	color: deepskyblue;
+}
+#footer a:hover{
+	transition: 0.5s;
+	color: deeppink;
+	text-decoration: underline;
+	letter-spacing: 3px;
+}
+#footer>section{
+	margin: 0 auto;
+	/*outline: blue 1px solid;*/
+	margin-top: 4%;
+}
+#footer>section>span{
+	font-size: 50px;
+}
+#footer>section>p{
+	margin-top: 25px;
+	font-size: 20px;
+}
+#footer>div{
+	width: 100%;
+	/*outline: #0000FF 1px solid;*/
+	/*background-color: aliceblue;*/
+	margin: 0 auto;
+}
+#footer>div>div:first-child{	
+	width: 75%;
+	/*outline: #0000FF 1px solid;*/
+	text-align: left;
+	float: left;
+}
+#footer>div>div:last-child{	
+	width: 25%;
+	/*outline: #0000FF 1px solid;*/
+	float: left;
+}
+#footer_form input,textarea{/*页脚表单样式*/
+	border: none;
+	width: 100%;
+	background-color: transparent;
+	text-indent: 1em;
+	color: #EBEBEB;
+	font-size: 20px;
+}
+#footer_form>p{
+	margin: 0px auto 2px;
+	height: 50px;
+	background-color: #26292E;
+}
+#footer_form>p:last-child{
+	height: auto;
+}
+#footer_form>p>input{
+	height: inherit;
+	line-height: 50px;
+	
+}
+#footer_form>p>textarea{
+	resize: vertical;
+	height: 300px;
+	font-family: "comic sans ms","microsoft yahei","微软雅黑";
+}
+/*faceBook、定位的侧边栏*/
+#sidenav{
+	width: 50px;
+	position: fixed;
+	top: 200px;
+	right: 0px;
+}
+#sidenav > li{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin-top: 10px;
+	font-size: 30px;
+	color: white;
+	border-radius: 4px;
+}
+#sidenav > li:hover{
+	/*animation: jitter 0.5s;*/
+	transform: rotate(25deg);
+	transition: 0.4s;
+}
+#sidenav > li:first-child{
+	background-color: #3b5998;
+}
+#sidenav > li:nth-child(2){
+	background-color: green;
+}
+#sidenav > li:nth-child(3){
+	
+	background-color: dodgerblue;
+}
+#sidenav > li:nth-child(4){
+	background-color: deeppink;
+}
+#sidenav > li:last-child{
+	background-color: orangered;
+}
+#sidenav button{
+ height: 100%;
+ width: 100%;
+ background-color: transparent;
+ border: none;
+ padding: 0;
+}
+#sidenav a{
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+/*用于下载的弹出框*/
+#download{
+	position: fixed;
+	/*width: 400px;
+	height: 300px;*/
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	box-sizing: border-box;
+	border: solid silver 3px;
+	top: 200px;
+	right: 200px;
+	background-color: white;
+	border-radius: 15px;
+	justify-content: space-around;
+	align-items: center;
+	transition: 0.5s;
+	display: none;
+}
+#download:hover{
+	background-color: deeppink;
+}
+#download:hover:before{
+	height: 30px;
+}
+#download a:first-child{
+	position: absolute;
+	top: 0px;
+	right: 3px;
+	color: white;
+}
+#download:before{
+	content: "";
+	transition: 0.5s;
+	position: absolute;
+	width: 150px;
+	height: 0px;
+	background-color: white;
+	top: 70%;
+}
+.download-a{
+	transition: 0.1s;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	background-color: hotpink;
+	color: white;
+}
+.download-a:hover{
+	height: 70px;
+	line-height: 70px;
+}
+.download-a:hover{
+	height: 70px;
+	line-height: 70px;
+}
+/*地图*/
+#map-container{
+	padding: 1%;
+	height: 370px;
+	width: 370px;
+	position: fixed;
+	top: 60px;
+	right: 150px;
+	background-color: rgba(0,62,101,1);
+	display: none;
+	z-index: 2;
+}
+#map{
+	height: 100%;
+	width: 100%;
+}
+/*登录框*/
+#login-container{
+	height:0px;
+	width: 0px;	/*370*/
+	padding: 2px;
+	border-radius: 5px;
+	border: 2px solid white;
+	position: fixed;
+	top: 120px;
+	right: 150px;
+	transition: 1s;
+	color: white;
+	background-color: rgba(0, 168, 255,1.0);
+	display: none;
+}
+#login-container>form>div:last-child{
+	width: 80%;
+	margin-top: 30px;
+	text-align: right;
+	position: relative;
+}
+#login-container>form>div:last-child a{
+	display: inline;
+	background-color: deepskyblue;
+	/*width: auto;*/
+}
+#login-container>form{
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	text-wrap: none;
+	transition: 0.5s;
+	opacity: 0;
+	display: none;
+}
+#login-close{
+	position: absolute;
+	font-size: 2em;
+	top: -20px;
+	right: -16px;
+	color: deeppink;
+}
+#login-close:hover{
+	animation: jitter 0.5s;
+}
+.login{
+	height: 40px;
+	font-size: 25px;
+	line-height: 40px;
+	width: 80%;
+	margin:30px 0px;
+	border:none;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	color: #EBEBEB;
+	text-align: center;
+}
+#submit{
+	border-bottom: blue 3px solid;
+	border-right: blue 3px solid;
+	border-top: deepskyblue 2px solid;
+	border-left: deepskyblue 2px solid;
+	border-radius: 5px;
+	background-color: deeppink;
+	width: 120px;
+	height: 40px;
+	color: white;
+	margin-top: 40px;
+}
+#submit:hover{
+	background-color: rgba(232, 67, 147,1.0);
+}
+/*加载动画*/
+#loading{
+	width: 1536px;
+	height: 728px;
+	position: fixed;
+	z-index: 5;
+	top: 0px;
+	left:0px;
+	background-color: #2F3238;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+#loading div{
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 5px;
+	background-color: deeppink;
+	position: relative;
+	color: white;
+	line-height: 60px;
+	/*transition: background-color 2s;*/
+}
+#loading>div{
+	left: -200px;
+}
+#loading>div>div{
+	/*transition: right 1s;*/
+	position: absolute;
+	top: 0px;
+	/*animation: loading 4s infinite;*/
+}
+#loading>div>div:first-child{
+	background-color: greenyellow;
+}
+#loading>div>div:nth-child(2){
+	background-color: deepskyblue;
+}
+#loading>div>div:nth-child(3){
+	background-color: #6c5ce7;
+}
+#loading>div>div:nth-child(4){
+	background-color: #fdcb6e;
+}
+/*天气栏*/
+/*#weather:hover>#Bweather{
+	display: block;
+}*/
+#Bweather{
+	width: 540px;
+	height: 291px;
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	top: 90px;
+	right: 150px;
+	display: none;
+}

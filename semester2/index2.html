@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>标签页</title>
+		<style type="text/css">
+			#container{
+				height: 50px;
+			}
+			#container>li{
+				height: 50px;
+				width: 90px;
+				float: left;
+				list-style: none;
+				margin-left: 60px;
+				background-color: deeppink;
+				color: white;
+				line-height: 50px;
+				text-align: center;
+			}
+			#container>li:hover{
+				cursor: pointer;
+			}
+			.content{
+				height: 600px;
+				width: 600px;
+				background-color: seashell;
+				text-align: center;
+				line-height: 600px;
+				font-size: 400px;
+				color: white;
+				position: absolute;
+				display: none;
+			}
+			.appear{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul id="container">
+				<li>标签1</li>
+				<li>标签2</li>
+				<li>标签3</li>
+			</ul>
+			<obj3 class="content">1</obj3>
+			<obj3 class="content">2</obj3>
+			<obj3 class="content">3</obj3>
+		</div>
+		<script>
+			function app(obj,objj,obj3){
+				var j = 0;
+				for(j;obj[j] != objj;j++);
+				obj3[j].className = obj3[j].className + " appear";
+				var length = obj.length;
+				for(var i = 0;i<obj.length;i++)
+				{
+					if(i != j)
+					{
+						obj3[i].className = "content";
+					}
+				}
+			}
+			var li = document.getElementsByTagName("li");
+			var div = document.getElementsByClassName("content");
+			for(var i = 0;i < li.length; i++){
+				li[i].onclick = function(){
+					app(li,this,div);
+				}
+			}
+		</script>
+	</body>
+</html>

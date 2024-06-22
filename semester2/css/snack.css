@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: deeppink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*抖动动画*/
+@keyframes jitter{
+	0%{transform:rotate(0deg);}
+	33%{transform:rotate(10deg);}
+	66%{transform:rotate(-10deg);}
+	99%{transform:rotate(0deg);}
+	100%{transform:rotate(0deg);}
+}
+/*分数栏*/
+#score{
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	border:solid 2px deeppink;
+	font-size: 20px;
+	line-height: 50px;
+	color: deeppink;
+	background-color: white;
+	position: fixed;
+	top: 700px;
+	right: 300px;
+	opacity: 0;
+	transition: 0.5s;
+	border-radius: 15px;
+	z-index: 2;
+}
+/*地图容器*/
+#wall{
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	position: relative;
+	outline: purple double 4px;
+	/*animation: jitter 0.2s 3 linear;*/
+}
+/*食物*/
+#food{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	background-color: black;
+}
+/*蛇*/
+.snack{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	background-color: deeppink;
+	outline: white solid 1px;
+	outline-offset: -2px;
+	transition: 0.2s;
+}
+/*敌人与剧情*/
+#enemy{
+	min-width: 400px;
+	height: 100px;
+	position: fixed;
+	top: 800px;
+	/*top: 550px;*/		/*700 -> 550*/
+	left: 100px;
+	opacity: 0;
+	transition: 0.5s;
+	background-color: white;
+	border-radius: 15px;
+	display: flex;
+	/*display: flex;*/
+	justify-content: space-around;
+	color: deeppink;
+	align-items: center;
+}
+/*成就*/
+#achievement{
+	padding: 0 25px;
+	min-width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: white 2px solid;
+	border-radius: 15px;
+	position: fixed;
+	text-align: center;
+	color: dodgerblue;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	top: 220px;
+	left: 50px;
+	opacity: 0;
+	transition: 0.5s;
+}
+#enemy_me{
+	width: 70px;
+	height: 70px;
+	background-color: white;
+	border-radius: 15px;
+}
+#enemy section{
+	/*background-color: deeppink;*/
+	max-height: 70px;
+	width: 70%;
+}
+#enemy_talk{
+	margin: 0;
+	padding: 0;
+	max-height: 70px;
+	text-align: center;
+	width: 280px;
+}
+.border{
+	border: deeppink solid 2px;
+}
+/*标签页样式*/
+#main{
+	background-color: white;
+	width: 1000px;
+	height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	border-radius: 10px;
+}
+/*标签页*/
+.content{
+	color: deeppink;
+	height: 600px;
+	width: 80%;
+	background-color: seashell;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	/*position: absolute;*/
+	display: none;
+}
+/*通用样式*/
+h1{
+	margin: 30px;
+}
+p{
+	margin: 10px;
+}
+#container{
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+#container>li{
+	transition: 0.3s;
+	height: 100%;
+	width: 90px;
+	list-style: none;
+	margin: 0 20px 0 10px;
+	background-color: deeppink;
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 5px;
+}
+#container>li:hover{
+	cursor: pointer;
+	background-color: hotpink;
+}
+.appear{
+	display: flex;
+}

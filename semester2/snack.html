@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>贪食蛇v0.5</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script src="js/snack.js"></script>
+		<link rel="stylesheet" href="css/snack.css" />
+	</head>
+	<body>
+		<!--分数统计块-->
+		<div id="score">
+		</div>
+		<div id="main">
+			<ul id="container">
+				<li>游戏说明</li>
+				<li>开始游戏</li>
+				<li>关于</li>
+			</ul>
+			<div class="content appear">
+				<section>
+					<aside>
+						<h1>游戏注意</h1>
+						<p>请在全屏模式下进行游戏</p>
+						<p>由于编者水平有限，游戏中存在部分可能会影响体验的BUG</p>
+						<p>请不要过快的切换方向键，这可能导致蛇移速出现异常</p>
+						<p>请不要在游戏过程中进行标签页的切换，这有可能导致您游戏失败</p>
+					</aside>
+					<aside>
+						<h1>游戏规则</h1>
+						<p>玩家控制贪吃蛇吃到“食物”，“食物”会给予玩家分数，请尽力获得较高的分数</p>
+						<p>每次吃到“食物”都会影响玩家所控制的“蛇”长度，当“蛇”碰撞到墙壁或者咬到自身时游戏结束</p>
+					</aside>
+					<aside>
+						<h1>操作方式</h1>
+						<p>玩家可以通过"W","S","A","D"键来控制蛇的移动方向</p>
+					</aside>
+				</section>
+			</div>
+			<div class="content">
+				<div id="wall">
+				<div class="snack"></div>
+				<div id="food"></div>
+				</div>
+			</div>
+			<div class="content">
+				<section>
+					<aside>
+						<h1>版权声明</h1>
+						<p>(c) Copyright 2019 藏. All Rights Reserved. </p>
+					</aside>
+					<aside>
+						<h1>开发时间&对应版本号</h1>
+						<p>2019年12月19日22:56:54 v0.1</p>
+						<p>2019年12月21日00:00:01 v0.2</p>
+						<p>2019年12月21日17:31:40 v0.3</p>
+						<p>2019年12月23日23:20:48 v0.4</p>
+						<p>2019年12月24日19:02:01 v0.5</p>
+					</aside>
+					<aside>
+						<h1>当前版本号</h1>
+						<p>v0.5</p>
+					</aside>						
+				</section>
+			</div>
+		</div>
+		<!--音频-->
+		<audio id="bacMusic">
+			遗憾，你的浏览器不支持音效
+			<source src="audio/snack_bg.ogg" class="bac"></source>
+			<source src="audio/snack_bg.wav" class="bac"></source>
+		</audio>
+		<audio id="eatFood">
+			太老了，换一个吧
+			<source src="audio/eatFood.mp3"></source>
+			<source src="audio/export_ofoct.com.ogg"></source>
+		</audio>
+		<audio id="goal">
+			坚持使用过老的浏览器会增加开发人员的负担
+			<source src="audio/goal.mp3"></source>
+			<source src="audio/goal.ogg"></source>
+		</audio>
+		<audio id="boom">
+			还会影响技术的发展
+			<source src="audio/boom.mp3"></source>
+			<source src="audio/boom.wav"></source>
+		</audio>
+		<!--对话框-->
+		<div id="enemy" class="border">
+			<img id="enemy_me" class="border" src="me/smile.png"/>
+			<section>
+				<p id="enemy_talk"></p>
+			</section>
+		</div>
+		<div id="achievement">成就</div>
+	</body>
+	<script type="text/javascript">
+		console.log('加载完成');
+		var background_music = document.getElementById("bacMusic");
+			function app(obj,objj,obj3){
+				var j = 0;
+				for(j;obj[j] != objj;j++);
+				obj3[j].className = obj3[j].className + " appear";
+				var length = obj.length;
+				for(var i = 0;i<obj.length;i++)
+				{
+					if(i != j)
+					{
+						obj3[i].className = "content";
+					}
+				}
+			}
+			var li = document.getElementsByTagName("li");
+			var div = document.getElementsByClassName("content");
+			for(var i = 0;i < li.length; i++){
+				li[i].onclick = function(){
+					app(li,this,div);
+					if(this.value == li[1].value){
+							background_music.autoplay = true;		//设置其为自动播放
+							background_music.loop = true;			//设置背景音乐循环播放
+					}
+				}
+			}
+		</script>
+</html>

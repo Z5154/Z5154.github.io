@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>EDU</title>
+		<link rel="stylesheet" href="css/index_structure.css" />
+		<link rel="stylesheet" href="css/index-mouse.css" />
+		<link rel="icon" href="img/icon.png"/>
+		<!--引入矢量图-->
+		<link rel="stylesheet" href="fonts/iconfont.css" />
+		<link rel="stylesheet" href="fonts/iconfont2.css" />
+		<script type="text/javascript" src="js/mouse.js"></script>
+	</head>
+	<body>
+        <!--代码雨-->
+        <canvas id="codeRain"></canvas>
+		<div id="content" class="clearfix">
+			<!--logo和天气-->
+			<header id="header" class="clearfix">
+				<section class="clearfix">
+					<canvas id="logo"></canvas>
+					<div id="weather-container">
+						<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"  id="weather"></iframe>
+						<div  id="Bweather">
+							<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=64" width="540" height="291" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>	
+							<a class="iconfont"></a>
+						</div>
+					</div>		<!--这个div为天气插件预留-->
+					<nav id="mainnav">
+						<li class="mainnav">主页
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>	
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>	
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>								
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>		
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<li class="mainnav">凑版面
+							<ul class="pop">
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+								<li class="pop_li"><a>弹出框</a></li>
+							</ul>
+						</li>
+						<span class="iconfont icon-icon-test6 toJitter" id="search"></span>
+						<form id="search-text" class="clearfix">
+							<input type="text" placeholder="这个搜索框是无效的" />
+							<a id="search-close" class="iconfont icon-icon-test15 toJitter"></a>
+						</form>
+					</nav>
+				</section>
+			</header>
+			<!--轮播-->
+			<div id="shuffling-container">
+				<img class="shuffling" id="on"/>
+				<img class="shuffling" />
+				<img class="shuffling" />
+				<button id="leftButton"><</button>
+				<button id="rightButton">></button>
+			</div>
+			<!--课程导航-->
+			<div id="subnav-container">
+				<nav id="subnav">
+					<span class="iconfont icon-zaixianpeixun"></span><li>网络课程<span>|</span></li>
+					<span class="iconfont icon-jiaolian1"></span><li>知名教师<span>|</span></li>
+					<span class="iconfont icon-icon-test4"></span><li>在线客服</li>
+				</nav>
+			</div>
+			<!--课程菜单-->
+			<div id="lesson-container">
+				<div class="lesson">
+					<img class="lesson_img" src="img/OS.jpg"/>
+						<aside>
+							<a>操作系统</a>
+							<p>教授计算机操作系统知识、包括widows、unlix、linlix</p>
+						</aside>
+				</div>
+				<div class="lesson">
+					<img class="lesson_img" src="img/HTML.jpg"/>
+					<aside>
+						<a>网页前端</a>
+						<p>网页开发从入门到就业，我们什么都教</p>
+					</aside>
+				</div>
+				<div class="lesson">
+					<img class="lesson_img" src="img/SQL.png"/>
+					<aside>
+						<a>数据库技术</a>
+						<p>数据库是IT行业里诞生图灵奖获得者最多的领域。向众多国内外数据库、数据分析领域的业界顶尖高手学习</p>
+					</aside>
+				</div>
+				<div class="lesson">
+					<img class="lesson_img" src="img/JAVA.png"/>
+					<aside>
+						<a>高级语言</a>
+						<p>JAVA、C#、Javascript等多种语言的学习以及头发保养</p>
+					</aside>
+				</div>
+				<div class="lesson">
+					<img class="lesson_img" src="img/MG.png"/>
+					<aside>
+						<a class="toColorb" href="index2.html">美术</a>
+						<p>美术指导、PS以及各种绘图软件的使用</p>
+					</aside>
+				</div>
+				<div class="lesson">
+					<img class="lesson_img" src="img/SEC.png"/>
+					<aside>
+						<a>学校地址</a>
+						<p>既可以选择网上学习，又有线下的学习基地</p>
+					</aside>
+				</div>
+			</div>
+			<!--课程评价-->
+			<div id="eva-container">
+				<div>		
+				</div>	<!--蒙版-->
+				<div></div>		<!--背景-->
+				<section>
+					<h5>学生对我们的评价</h5>
+					<p>没有比让你在获得技能的同时感到舒适更重要的了</p>
+					<p>我们始终倾听学生的意见及建议</p>
+				</section>
+				<div class="clearfix">
+					<aside class="stu-eva clearfix">	<!--清除内部浮动造成的高度塌陷-->
+							<img class="img_eva" src="img/Peter.png"/>
+							<div>
+								<h5>上学很方便</h5>
+								<p>
+									Etiam nec odio vestibulum est matt
+									is effic iturut magna. Pellentesqu
+									e sit amet tellus blandit. Etiam n
+									ec odio vestibulum est mattis effi
+									c iturut magna. Pellentesque s
+									it am et tellus blandit. Etiam nec
+									odio vestibul. Etiam nec odio ves
+									tibulum est mat tis effic iturut 
+									magna.
+								</p>
+								<p><span class="toColor">Peter,</span>student</p>
+							</div>
+					</aside>
+					<aside class="stu-eva">
+						<img class="img_eva" src="img/PP.png"/>
+							<div>
+								<h5>教师非常耐心负责</h5>
+								<p>
+									Etiam nec odio vestibulum est matt
+									is effic iturut magna. Pellentesqu
+									e sit amet tellus blandit. Etiam n
+									ec odio vestibulum est mattis effi
+									c iturut magna. Pellentesque s
+									it am et tellus blandit. Etiam nec
+									odio vestibul. Etiam nec odio ves
+									tibulum est mat tis effic iturut 
+									magna.
+								</p>
+								<p><span class="toColor">PP,</span>student</p>
+							</div>
+					</aside>
+					<aside class="stu-eva">
+						<img class="img_eva" src="img/KiKi.png"/>
+							<div>
+								<h5>他们真的很会跳舞</h5>
+								<p>
+									Etiam nec odio vestibulum est matt
+									is effic iturut magna. Pellentesqu
+									e sit amet tellus blandit. Etiam n
+									ec odio vestibulum est mattis effi
+									c iturut magna. Pellentesque s
+									it am et tellus blandit. Etiam nec
+									odio vestibul. Etiam nec odio ves
+									tibulum est mat tis effic iturut 
+									magna.
+								</p>
+								<p><span class="toColor">KiKi,</span>student</p>
+							</div>
+					</aside>
+					<aside class="stu-eva">
+						<img class="img_eva" src="img/ChuChu.png"/>
+							<div>
+								<h5>优秀的硬件设备</h5>
+								<p>
+									Etiam nec odio vestibulum est matt
+									is effic iturut magna. Pellentesqu
+									e sit amet tellus blandit. Etiam n
+									ec odio vestibulum est mattis effi
+									c iturut magna. Pellentesque s
+									it am et tellus blandit. Etiam nec
+									odio vestibul. Etiam nec odio ves
+									tibulum est mat tis effic iturut 
+									magna.
+								</p>
+								<p><span class="toColor">ChuChu,</span>student</p>
+							</div>
+					</aside>
+				</div>
+				<div>
+					<button id="button-more-eva" class="toButton toJitter">See More</button>
+				</div>
+			</div>
+			<!--最受欢迎的课程-->
+			<div id="popular-container" class="clearfix">
+				<section>
+					<h5>The best</h5>
+					<p>我们所提供的最受欢迎的课程和教师</p>
+				</section>
+				<!--课程-->
+				<aside>			
+					<div>
+						<h5>C#</h5>
+						<span class="toColorc">By Simon Smith | March 18, 2018</span>
+						<p>
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. 
+						</p>
+						<button class="toButton toJitter">
+							See More
+						</button>
+					</div>
+					<div class="rotateing">
+						<div class="rotate">未开启</div>
+						<img src="img/PERL.jpg"/>
+					</div>
+				</aside>
+				<aside>
+					<div>
+						<h5>Python</h5>
+						<span class="toColorc">By Simon Smith | March 18, 2018</span>
+						<p>
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. 
+						</p>
+						<button class="toButton toJitter">
+							See More
+						</button>
+					</div>
+					<div class="rotateing">
+						<div class="rotate">未开启</div>
+						<img src="img/PERL.jpg"/>
+					</div>
+				</aside>
+				<aside>
+					<div>
+						<h5>JAVA</h5>
+						<span class="toColorc">By Simon Smith | March 18, 2018</span>
+						<p>
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. 
+						</p>
+						<button class="toButton toJitter">
+							See More
+						</button>
+					</div>
+					<div class="rotateing">
+						<div class="rotate">未开启</div>
+						<img src="img/PERL.jpg" />
+					</div>
+				</aside>
+				<aside>
+					<div>
+						<h5>Basic</h5>
+						<span class="toColorc">By Simon Smith | March 18, 2018</span>
+						<p>
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. Donec et sollicitudin est, in euismod.
+							Cras vitae turpis lacinia, lacinia lacus non, fermentum nisi. 
+						</p>
+						<button class="toButton toJitter">
+							See More
+						</button>
+					</div>
+					<div class="rotateing">
+						<div class="rotate">未开启</div>
+						<img src="img/PERL.jpg" />
+					</div>
+				</aside>
+				<div class="clearfix">
+					<div class="ad">
+						<video title="学员风采" class="video" controls="controls">
+						<source src="video/119133323.mp4"></source>
+						<source src="video/119133323-1-15.ogg"></source>
+						您的浏览器不支持视频
+						</video>
+					</div>
+					<div class="ad">
+						<video title="学习日常" class="video" controls="controls">
+						您的浏览器不支持视频
+						<source src="video/59904545.mp4"></source>
+						</video>
+					</div>
+					<div class="ad">
+						<video title="学员风采" class="video" controls="controls" src="video/119133323-1-15.ogg","video/119133323-1-15.mpeg">
+						您的浏览器不支持视频
+						</video>
+					</div>
+					<div class="ad">
+						<video title="学员风采" class="video" controls="controls">
+						<source src="video/119133323.mp4"></source>
+						<source src="video/119133323-1-15.ogg"></source>
+						您的浏览器不支持视频
+						</video>
+					</div>
+				</div>
+			</div>
+			<!--脚部-->
+			<footer id="footer" class="clearfix">
+				<section>
+					<span>联系我们</span>
+					<p>请留下您的联系方式，我们的团队会在正式上线时为您发来邮件</p>
+				</section>
+				<div class="clearfix">
+					<div>
+						<form id="footer_form">
+							<p>
+								<input type="text" placeholder="您的真实姓名" id="user_name" />
+							</p>
+							<p>
+								<input type="email" placeholder="邮箱" id="user_email"/>
+							</p>
+							<p>
+								<input type="text" placeholder="QQ或者微信" id="user_num"/>
+							</p>
+							<p>
+								<textarea placeholder="留言" id="user_message">
+									
+								</textarea>
+							</p>
+						</form>
+					</div>
+					<div>
+						<section>
+							<h3>Contact US</h3>
+							<br />
+							<p>
+								<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=346935060&site=qq&menu=yes" class="toJitter">346935060@QQ.com</a>
+							</p>		
+							<br />
+							<p>为您提供最好的学习体验</p>
+							<br />
+							<p>(916) 375-2525</p>
+						</section>
+					</div>
+				</div>
+			</footer>
+			<!--faceBook、定位等-->
+			<ul id="sidenav">
+				<li><button id="login-button"><a class="iconfont icon-icon-test12" title="登录"></a></button></li>
+				<li><button id="download-btn"><a class="iconfont icon-icon-test7" title="下载我的网页开发阶段图"></a></button></li>
+				<li><button><a href="mailto:mailteam@qq.com" class="iconfont icon-icon-test2" title="邮箱"></a></button></li>
+				<li><button><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=346935060&site=qq&menu=yes" class="iconfont icon-qq2-copy-copy" title="QQ空间"></a></button></li>
+				<li><button id="button-map"><a class="iconfont icon-weizhidingwei" title="定位"></a></button></li>
+			</ul>
+			<!--地图-->
+			<div id="map-container" class="toTv">
+				<div id="map"></div>
+			</div>
+		</div>
+			<!--登录框-->
+			<div id="login-container">
+				<form id="login-form">
+					<a id="login-close" class="iconfont icon-icon-test15 toJitter"></a>
+					<div>
+					<label for="userName">用户名:</label>
+					<input type="text" id="userName" class="login" placeholder="Username" />
+					</div>
+					<div>
+						<label for="passWord">密码：</label>
+						<input type="password" placeholder="Password" class="login" id="passWord" />
+					</div>
+					<div>
+						<button type="submit" id="submit" class="toJitter">登录</button>
+					</div>
+					<br />
+					<div><small>没有账号？点击<a href="Coming.html">注册</a></small></div>
+				</form>
+			</div>
+			<!--加载动画-->
+			<div id="loading">
+				<div>
+					<div class="loads">loading</div>
+					<div class="loads">loading</div>
+					<div class="loads">loading</div>
+					<div class="loads">loading</div>
+					<div>loading</div>
+				</div>
+			</div>
+			<!--下载用的弹出框-->
+			<div id="download">
+				<a class="iconfont icon-icon-test15" id="download-close"></a>
+				<a  href="file/我的网页开发阶段图.docx" download="我的网页开发阶段图.docx" class="download-a">下载开发阶段书</a>
+				<a href="file/2019年期末项目总结.docx" download="2019年期末项目总结.docx" class="download-a">下载开发总结</a>
+			</div>
+		<!--<script type="text/javascript" src="js/index.js" ></script>
+		-->
+		<script type="text/javascript" src="js/loading.js"></script>
+		<script type="text/javascript" src="js/animation.js" ></script>
+		<script type="text/javascript" src="js/pop.js" ></script>
+		<script type="text/javascript" src="js/content.js" ></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=6RtNQcnjN9GPp4ebj793GEmxx9fEMQk5"></script>
+		<!--<script type="text/javascript" src="js/map.js" ></script>-->
+		<script type="text/javascript" src="js/codeRain.js" ></script>
+	</body>
+</html>
