@@ -29,20 +29,13 @@ window.onload = function(){
 		},500)
 	}
 /*地图*/
-	function mapSeter(){
-		var map = new BMap.Map("map");
-		var point = new BMap.Point(106.430691,29.826659);
-		map.centerAndZoom(point, 15);
-		//map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
-		map.enableScrollWheelZoom(true);
-	}
 	var map_button = document.getElementById("map-button");
 	var map = document.getElementById("map_container")
 	var flag = true;
 	map_button.onclick = function(){
 		if(flag){
 			map.style.display = "block";
-			mapSeter();
+			// mapSeter();
 			flag = !flag;
 			
 		}else{
