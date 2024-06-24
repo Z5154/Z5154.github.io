@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录 | 注册</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<form id="form">
+			<div><label for="username">用户名：</label><input type="text" id="username" placeholder="用户名"/></div>
+			<div><label for="username">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" id="username" placeholder="密码"/></div>
+			<div class="none"><label for="username">邮&nbsp;&nbsp;&nbsp;&nbsp;箱：</label><input type="text" id="username" placeholder="用户名"/></div>
+			<div><input type="button" id="login" value="登录"/><input type="button" id="submit" value="注册"/></div>
+		</form>
+		<script>
+			var submit = document.getElementById("submit");
+			var login = document.getElementById("login");
+			var none = document.getElementsByClassName("none")[0];
+			var form = document.getElementById("form");
+			var flag = true;
+			submit.onclick = function(){
+				if(flag){
+					none.style.display = "flex";
+					form.style.backgroundColor = "darkgreen";
+					this.style.backgroundColor = "darkgreen";
+					flag =!flag;
+				}else{
+					alert("暂未开放");
+				}
+			}
+			login.onclick = function(){
+				if(!flag){
+					none.style.display = "none";
+					form.style.backgroundColor = "rgb(16,70,133)";
+					submit.style.backgroundColor = "rgb(16,70,133)";
+					flag =!flag;
+				}else{
+					alert('暂未开放');
+				}
+			}
+		</script>
+	</body>
+</html>
