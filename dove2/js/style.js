@@ -26,21 +26,7 @@ $member.mouseleave(function(e){
 	$pop_image_right.css("display","none");
 })
 /*地图*/
-function mapSeter(){
-	var map = new BMap.Map("map");
-	var point = new BMap.Point(104.793702,31.495834);
-	map.centerAndZoom(point, 17);
-	var marker = new BMap.Marker(point);        // 创建标注    
-	map.addOverlay(marker);                     // 将标注添加到地图中 
-	map.enableScrollWheelZoom(true);
-}
-var Map = document.getElementById("map");
-var Mapcount = 1;
-		textColor = "orange";
-		code = "绵阳职业技术学院崇实楼";
-		Map.style.display = "block";
-		Mapcount = 0;
-		mapSeter();
+
 //轮播
 var bn = document.getElementById("bn");
 var banner_img = document.getElementsByClassName("banner_img");
@@ -49,32 +35,7 @@ var toLeft = document.getElementById("toLeft");
 var toRight = document.getElementById("toRight");
 var banner_choose = document.getElementById("banner_choose");
 var choose_item = document.getElementsByClassName("choose_item");
-//毛秋月
-//$(function(){
-//	var index=0;
-//	function dingshiqi(){
-//	var f=setInterval(function(){
-//		if(index==$(".banner_img").length-1){
-//			index=0;
-//			$(".banner_img").css("opacity","0");
-//			$(".banner_img").eq(index).css("opacity","1");
-//		}else{
-//			index++;
-//			$(".banner_img").css("opacity","0");
-//			$(".banner_img").eq(index).css("opacity","1");
-//		}
-//	},2000)}
-//
-//	$(".botton").click(function(){
-//		clearInterval(f);
-//		var indexx=$(this).index();
-//		index=indexx;
-//		$(".banner_img").css("opacity","0");
-//		$(".banner_img").eq(index).css("opacity","1");
-//		dingshiqi();
-//	})
-//})
-//毛秋月
+
 function press(boolean){
 	banner_img[index].id = '';
 	choose_item[index].className = "choose_item";
