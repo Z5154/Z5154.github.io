@@ -45,7 +45,7 @@ window.onload = function(){
 }
 	/*轮播*/
 	var shu = document.getElementById("shuffling");
-	var px = -1250;
+	var px = -1250; 
 	var count = 1;
 	function shuff(count){
 		shu.style.left = count * px + "px";
