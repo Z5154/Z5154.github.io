@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>B8折叠</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/js/bootstrap.bundle.js" ></script>
+	</head>
+	<body>
+		<!--<a> 元素上你可以使用 href 属性来代替 data-target -->
+		<div class="container">
+			<button type="button" class="btn btn-primary" data-toggle = "collapse" data-target = "#demo">简单的折叠</button>
+			<div id="demo" class="collapse show">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+			    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+			<p>手风琴实例</p>
+			<hr />
+			<div class="card" id="card">
+				<div class="card-header">
+					<a class="card-link" data-toggle = "collapse" href="#one">选项一</a>
+				</div>
+				<div id="one" class="collapse show" data-parent="#card">
+					<div class="card-body">
+						#1 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+					</div>
+				</div>
+				<div class="card-header">
+					<a class="card-link" data-toggle = "collapse" href="#two">选项二</a>
+				</div>
+				<div id="two" class="collapse" data-parent="#card">
+					<div class="card-body">
+						#2 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+					</div>
+				</div>
+				<div class="card-header">
+					<a class="card-link" data-toggle="collapse" href="#three">选项三</a>
+				</div>
+				<div id="three" class="collapse" data-parent="#card">
+					<div class="card-body">
+						#3 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

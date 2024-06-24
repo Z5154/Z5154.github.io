@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>B9导航</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/js/bootstrap.bundle.js" ></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul class="nav nav-tabs justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Link2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link3</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+			<p>胶囊导航</p>
+			<hr />
+			<!--可以通过添加flex-column类使其垂直排列，同时justify-content-会失效-->
+			<!--nav-justified使导航垂直齐行等宽显示-->
+			<ul class="nav nav-pills nav-justified">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Link1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link2</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link3</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+			<p>胶囊下拉式菜单</p>
+			<hr />
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Active</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle " data-toggle = "dropdown" href="#">Dropdown</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Link1</a>
+						<a class="dropdown-item" href="#">Link2</a>
+						<a class="dropdown-item" href="#">Link3</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+			<p>选项卡下拉式菜单</p>
+			<hr />
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Active</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="dropdown-toggle nav-link" data-toggle = "dropdown" href="#">Dropdown</a>
+					<div class="dropdown-menu">
+						<div class="dropdown-header">Link</div>
+						<a class="dropdown-item" href="#">Link1</a>
+						<a class="dropdown-item" href="#">Link2</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item disabled" href="#">Disabled</a>
+					</div>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Link</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" href="#">Disabled</a>
+				</li>
+			</ul>
+			<p>动态选项卡</p>
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#home">Home</a> 
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu1">menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#menu2">menu2</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane container active" id="home"><br />
+					<h3>HOME</h3>
+      				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="tab-pane fade container" id="menu1"><br />
+					<h3>Menu 1</h3>
+      				<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="tb-pane fade container" id="menu2"><br />
+					<h3>Menu 2</h3>
+      				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

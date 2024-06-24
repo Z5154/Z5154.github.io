@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+}
+
+#mycanvas{
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+}

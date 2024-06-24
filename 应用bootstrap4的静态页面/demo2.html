@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/demo2.css" />
+		<title></title>
+	</head>
+	<body>
+		<!--导航栏-->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<!--小屏幕-->
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="移动界面demo2.html" class="navbar-brand">绵职Admin</a>
+				</div>
+				<!--导航栏选项-->
+				<div class="collapse navbar-collapse" id="mynavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="移动界面demo2.html"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;后台首页</a></li>
+						<li><a href="user.html"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;用户管理</a></li>
+						<li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;内容管理</a></li>
+						<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>&nbsp;&nbsp;标签管理</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+						  <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    admin
+						    <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu" aria-labelledby="dLabel">
+						    <li><a href=""><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;前台主页</a></li>
+						    <li><a href=""><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;个人主页</a></li>
+						    <li><a href=""><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;个人设置</a></li>
+						    <li><a href=""><span class="glyphicon glyphicon-credit-card"></span>&nbsp;&nbsp;账号中心</a></li>
+						    <li><a href=""><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的收藏</a></li>
+						  </ul>
+						</li>
+						<li><a href=""><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!---->
+		<div class="container">
+			<div class="row">
+				<!--警告框-->
+				<div class="col-md-12">
+				    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+					    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+					    <h4>网站存在系统漏洞，急需修复！</h4>
+					    <p>当前版本程序存在严重安全问题，容易造成攻击，请即可修复！</p>
+					    <p>
+					       <button type="button" class="btn btn-danger">理科修复</button>
+					       <button type="button" class="btn btn-default" data-dismiss="alert">稍后处理</button>
+					    </p>
+					</div>
+				</div>
+				<!--警告框-->
+				<!--网站数据统计-->
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">网站统计数据</div>
+						<div class="panel-body">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th>统计项目</th>
+										<th>今日</th>
+										<th>昨日</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>注册会员</th>
+										<td>200</td>
+										<td>400</td>
+									</tr>
+									<tr>
+										<th>登录会员</th>
+										<td>4100</td>
+										<td>5110</td>
+									</tr>
+									<tr>
+										<th>发帖数量</th>
+										<td>211</td>
+										<td>500</td>
+									</tr>
+									<tr>
+										<th>转载数量</th>
+										<td>150</td>
+										<td>300</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--网站数据统计-->
+				<!--网站热帖-->
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">网站热帖</div>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖一
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖二
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖三
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖四
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖五
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+							<li class="list-group-item">
+								<a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									热帖六
+									<small class="pull-right">2020/3/1</small>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--网站热帖-->
+				<!--就业情况统计-->
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">就业情况统计</div>
+						<div class="panel-body">
+							<div id="myChart" style="height: 280px;"></div>
+						</div>
+					</div>
+				</div>
+				<!--就业情况统计-->
+				<!--进度条-->
+				<div class="col-md-6">
+					<div class="panel panel-default">
+						<div class="panel-heading">服务器状态</div>
+						<div class="panel-body">
+							<p>内存使用率：40%</p>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+							    <span class="sr-only">40% Complete (success)</span>
+							  </div>
+							</div>
+							<p>数据库使用率：20%</p>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+							    <span class="sr-only">20% Complete</span>
+							  </div>
+							</div>
+							<p>磁盘使用率：60%</p>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+							    <span class="sr-only">60% Complete (warning)</span>
+							  </div>
+							</div>
+							<p>CPU使用率：80%</p>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+							    <span class="sr-only">80% Complete (danger)</span>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--进度条-->
+				<!--留言板-->
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">团队留言板</div>
+						<div class="panel-body">
+							<!--左边-->
+							<div class="col-md-7">
+								<div class="media well">
+									<div class="media-left">
+										<a href="">
+											<img src="img/waixingren.png" class="media-object" alt="外星人" title="外星人" />
+										</a>
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading">外星人</h4>
+										<p>李白乘舟将欲行</p>
+									</div>
+								</div>
+								<div class="media well">
+									<div class="media-body text-right">
+										<h4 class="media-heading">彗星</h4>
+										<p>忽闻岸上踏歌声</p>
+									</div>
+									<div class="media-right">
+										<a href="">
+											<img src="img/huixing.png" class="media-object" alt="彗星" title="彗星" />
+										</a>
+									</div>
+								</div>
+								<div class="media well">
+									<div class="media-left">
+										<a href="">
+											<img src="img/diqiu.png" class="media-object" alt="地球" title="地球" />
+										</a>
+									</div>
+									<div class="media-body">
+										<h4 class="media-heading">地球</h4>
+										<p>桃花潭水深千尺</p>
+									</div>
+								</div>
+								<div class="media well">
+									<div class="media-body text-right">
+										<h4 class="media-heading">宇航员</h4>
+										<p>不及汪伦送我情</p>
+									</div>
+									<div class="media-right">
+										<a href="">
+											<img src="img/yuhangyuan.png" class="media-object" alt="宇航员" title="宇航员" />
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--右边-->
+							<div class="col-md-5">
+								<form action="#">
+									<div class="form-group">
+										<label for="text">输入留言内容</label>
+										<textarea class="form-control" rows="5" cols="10" placeholder="请输入对应内容"></textarea>
+										<button type="submit" class="btn btn-default mar-btn">留言</button>
+									</div>
+								</form>
+								<div class="panel panel-default">
+									<div class="panel-heading">团队联系手册</div>
+									<div class="panel-body">
+										<ul class="list-group">
+											<li class="list-group-item">站长（地球）：
+												<span class="glyphicon glyphicon-earphone"></span>
+												13567842568
+											</li>
+											<li class="list-group-item">技术（宇航员）：
+												<span class="glyphicon glyphicon-earphone"></span>
+												13574689123
+											</li>
+											<li class="list-group-item">推广（彗星）：
+												<span class="glyphicon glyphicon-earphone"></span>
+												13357896544
+											</li>
+											<li class="list-group-item">客服（外星人）：
+												<span class="glyphicon glyphicon-earphone"></span>
+												17895531414 &nbsp;&nbsp;&nbsp;
+												<span class="glyphicon glyphicon-phone-alt"></span>
+												028-457311
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--留言板-->
+			</div>
+		</div>
+		<!--页脚-->
+		<footer id="foot">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>(c) Copyright 2020 藏. All Rights Reserved. </p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/js/bootstrap3.js" ></script>
+		<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+		<script type="text/javascript" src="js/myChart.js" ></script>
+	</body>
+</html>

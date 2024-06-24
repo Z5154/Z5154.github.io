@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/bootstrap-demo1.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<title></title>
+	</head>
+	<body data-spy="scroll" data-target = "#mynavbar" data-offset="170"  id="top">
+		<!--回到顶部-->
+		<a id="backTop" class="glyphicon glyphicon-arrow-up" href="#top"></a>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<!--小屏幕导航按钮和logo-->
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle = "collapse" data-target="#mynavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand">绵阳职业技术学院</a>
+				</div>
+				<!--导航-->
+				<div class="collapse navbar-collapse" id="mynavbar">
+					<url class="nav navbar-nav navbar-right">
+						<li><a href="#home">首页</a></li>
+						<li><a href="#bbs">论坛</a></li>
+						<li><a href="#html5">前端开发</a></li>
+						<li><a href="#course">最新课程</a></li>
+						<li><a href="#app">移动APP</a></li>
+						<li><a href="#contact">联系我们</a></li>
+					</url>
+				</div>
+			</div>
+		</nav>
+		<!--home-->
+		<section id="home">
+			<div class="lvjing">
+				<div class="container">
+					<div class="row wow fadeInUp" data-wow-duration = "2s">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<h1>Bootstrap实战课程等你来战！</h1>
+							<p>本套课程使用于：1、WEB开发人员；2、网站维护人员。管理人员<br>
+							培训技能目标：使用Bootstrap快速构建响应式网页.
+							</p>
+							<!--<img src="img/home2.jpg" alt="BootStrap" class="img-responsive"/>-->
+							<div id="side" class="carousel slide">
+								<ol class="carousel-indicators">
+									<li data-target = "#side" data-slide-to = "0" class="active"></li>
+									<li data-target = "#side" data-slide-to = "1"></li>
+									<li data-target = "#side" data-slide-to = "2"></li>
+								</ol>
+								<!--轮播项-->
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="img/home2.jpg" class="img-responsive"/>
+										<div class="carousel-caption">图片1</div>
+									</div>
+									<div class="item">
+										<img src="img/home2.jpg" class="img-responsive"/>
+										<div class="carousel-caption">图片2</div>
+									</div>
+									<div class="item">
+										<img src="img/home2.jpg" class="img-responsive"/>
+										<div class="carousel-caption">图片3</div>
+									</div>
+								</div>
+								<!--轮播导航-->
+								<a class="left carousel-control" href="#side" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#side" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--bbs-->
+		<section id="bbs">
+			<div class="container">
+				<div class="row wow fadeInUp" data-wow-duration = "2s">
+					<a href="http://www.baidu.com">
+						<div class="col-md-4">
+							<img src="img/bbs-a.jpg" class="img-responsive"/>
+							<h3>Android开发</h3>
+							<p>Android开发技术交流，问题求助，实战案例分享</p>
+						</div>
+					</a>
+					<a href="http://www.baidu.com">
+						<div class="col-md-4">
+							<img src="img/bbs-i.jpg" class="img-responsive"/>
+							<h3>IOS开发</h3>
+							<p>IOS开发技术交流，问题求助，实战案例分享</p>
+						</div>
+					</a>
+					<a href="http://www.baidu.com">
+						<div class="col-md-4">
+							<img src="img/bbs-b.jpg" class="img-responsive"/>
+							<h3>嵌入式开发</h3>
+							<p>嵌入式开发技术交流，问题求助，实战案例分享</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!--html5-->
+		<section id="html5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 wow fadeInLeft" data-wow-duration = "2s">
+						<h2>HTML5前端开发</h2>
+						<p>一线资深前端工程师倾情打造，助你完成普通程序员到优秀工程师的华丽升级！</p>
+						<p><span class="glyphicon glyphicon-grain mai-icon"></span>使用HTML5与CSS3技术轻松实现设备自适应展示</p>
+						<p><span class="glyphicon glyphicon-grain mai-icon"></span>清晰明了的语义代码结构，更高的可读性、更利于页面维护</p>
+					</div>
+					<div class="col-md-6 wow fadeInRight" data-wow-duration = "2s">
+						<img src="img/logo.11.jpg" class="img-responsive"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--bootstrap-->
+		<section id="boot">
+			<div class="container wow fadeInUp" data-wow-duration = "2s">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="img/bootstrap.jpg" class="img-responsive"/>
+					</div>
+					<div class="col-md-6">
+						<h2>bootstrap实战视频教程</h2>
+						<p>bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局，移动设备优先的WEB项目</p>
+						<p><span class="glyphicon glyphicon-grain mai-icon"></span>你的网站和应用能在Bootstrap的帮助下通过同一份代码快速、有效的适配手机、平板、PC设备</p>
+						<p><span class="glyphicon glyphicon-grain mai-icon"></span>Bootstrap提供了全面、美观的文档。你能在这里找到关于HTML元素、HTML和CSS组件、jQuery插件方面的所有相关文档。</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!--course-->		
+		<section id="course">
+			<div class="container wow fadeInUp" data-wow-duration = "2s">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>最新课程</h2>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+					<div class="col-md-3">
+						<img src="img/course.jpg" class="img-responsive"/>
+						<a href="http://www.baidu.com" class="btn btn-primary">加入学习</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--app区-->
+		<section id="app">
+			<div class="container wow fadeInUp" data-wow-duration = "2s">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>绵阳职业技术学院</h2>
+						<p>
+							全新的UI交互与新网站数据同步，更加丰富的课程，开启精彩无限。
+							语音搜索课程，喊出你想要的课程，一键收藏，方便自己重复学习，离线下载课程，在哪儿都能开。
+						</p>
+						<button class="btn btn-primary">
+							<span class="glyphicon glyphicon-arrow-down"></span>
+							iPhone版
+						</button>
+						<button class="btn btn-primary">
+							<span class="glyphicon glyphicon-arrow-down"></span>
+							Android版
+						</button>
+					</div>
+					<div class="col-md-6">
+						<img src="img/app.png" class="img-responsive"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--contact-->
+		<section id="contact">
+			<div class="lvjing">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6  wow fadeInLeft" data-wow-duration = '2s'>
+							<h2>
+								<span class="glyphicon glyphicon-send"></span>&nbsp;
+								联系我们
+							</h2>
+							<p>
+								手动备份书签的方法是：
+								1.点击 Alt 键打开显示菜单栏，选择 书签-管理所有书签 以打开我的足迹窗口。（快捷键 Shift+Ctrl+B）
+								2.在“我的足迹”窗口，点击“导入和备份”按钮，然后选择备份。
+								3.在打开的“书签备份文件名”窗口中，选择文件的保存位置，默认文件名是 bookmarks-"日期".json，将文件备份到你可以找到的任意位置。
+								同理恢复书签的方法为：
+								1.在上面“我的足迹”窗口，点击导入以及备份按钮，然后选择恢复菜单。
+								2.火狐默认会在配置文档中保存最近10次的书签修改，但如果是新设备或配置文档被清除，则这里只有默认书签。
+								3.点击“选择文件…”从上一步手动备份的文件中恢复书签。
+							</p>
+							<address>
+								<p>
+									<span class="glyphicon glyphicon-home"></span>&nbsp;
+									联系地址：
+								</p>
+								<p>
+									<span class="glyphicon glyphicon-earphone"></span>&nbsp;
+									联系电话：
+								</p>
+							</address>
+						</div>
+						<div class="col-md-6 wow fadeInRight" data-wow-duration = "2s">
+							<form action="#" method="post">
+								<div class="col-md-6">
+									<input type="text" class="form-control" placeholder="您的姓名"/>
+								</div>
+								<div class="col-md-6">
+									<input type="email" class="form-control" placeholder="您的邮箱" />
+								</div>
+								<div class="col-md-12">
+									<input type="text" class="form-control" placeholder="标题" />
+								</div>
+								<div class="col-md-12">
+									<textarea class="form-control" placeholder="留言内容" rows="4"></textarea>
+								</div>
+								<div class="col-md-8">
+									<input type="submit" class="form-control" value="提交" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--页脚-->
+		<section id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>(c) Copyright 2020 藏. All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/js/bootstrap3.js" ></script>
+		<script type="text/javascript" src="js/jquery.singlePageNav.min.js" ></script>
+		<script src="https://cdn.bootcss.com/wow/1.1.2/wow.js"></script>
+		<script>
+			$(function(){
+				$(".nav").singlePageNav({
+					offset:70
+				});
+				$('.navbar-collapse a').click(function(){
+					$('.navbar-collapse').collapse('hide');
+				})
+				new WOW().init();
+				//滚动监听
+				$('body').scrollspy({ target: '#mynavbar' });
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,117 @@
+.btn-radius{
+	
+}
+body{
+	padding:105px 0 0;
+}
+body>div{
+	padding: 0;
+}
+.btn-margin{
+	margin-right: 5px;
+}
+#nav-head{
+	height: 60px;
+	margin-bottom: 60px;
+	padding: 50px 0;
+}
+.red{
+	color: orangered;
+}
+.phone{
+	margin-top: 30px;
+	margin-bottom: 150px;
+	height: 400px;
+	/*background-color: blue;*/
+}
+.first-child{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+}
+.first-child h6{
+	line-height: 25px;
+}
+#read{
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+}
+.last-child>img{
+	width: 100%;
+	height: auto;
+}
+.first-child>h3{
+	margin: 30px 0 50px;
+}
+.first-child>p{
+	display: flex;
+	align-items: center;
+}
+
+.first-child>p>input:first-child{
+	margin-right: 20px;
+}
+/*友链*/
+#friendLink{
+	height: 100px;
+	line-height: 100px;
+	background-color: #EBEBEB;
+	color: silver;
+	font-size: 16px;
+}
+#friendLink>div>img{
+	margin: 0px 30px;
+}
+/*中部黄色色块*/
+#yellow{
+	background-color: #FFE284;
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#yellow>h2{
+	margin-top: 50px;
+	font-weight: bold;
+}
+#yellow>div{
+	margin-top: 60px;
+	width: 500px;
+	height: 250px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 2px 5px 5px #EBEBEB;}
+/*底部*/
+#a{
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+#footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	background-color: #5A6268;
+	color: white;
+}
+/*掩护*/
+#fixed{
+	height: 200px;
+	width: 45px;
+	position: fixed;
+	background-color: black;
+	top: 170px;
+	border-bottom-left-radius: 30px;
+	border-top-left-radius: 30px;
+	right: 0px;
+	color: white;
+}
+.dropdown-menu{
+	background-color: white;
+}
+.dropdown-item:hover{
+	background-color: sandybrown;
+}
